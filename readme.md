@@ -32,7 +32,6 @@ This is a website for the club to serve as our first project and showcase for ou
       List<Project> mProjects 
       HashMap<String, String> mUrls 
       ```
-
 2. MemberController.java
 3. Project.java
 4. Framework.java
