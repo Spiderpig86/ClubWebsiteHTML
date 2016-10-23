@@ -16,5 +16,28 @@ This is a website for the club to serve as our first project and showcase for ou
   - app.js (If we need it)
 2. members.html
   - CSS file naming pending
-3. ideas.html
+3. projects.html
   - CSS file naming pending
+4. ideas.html
+  - CSS file naming pending
+  
+### Back-end TODO
+1. Member.java (Stores member data)
+   - Basic strucutre
+   ```Java
+      String mFullname
+      String mEmail
+      String mMajor
+      String mImagePath
+      List<Project> mProjects 
+      HashMap<String, String> mUrls 
+      ```
+
+2. MemberController.java
+3. Project.java
+4. Framework.java
+
+### Resources
+
+- Hungarian Notation (as discussed by Chris)
+  - [Hungarian Notation examples](https://en.wikipedia.org/wiki/Hungarian_notation#Examples, "If you're reading this, you are cool.")
