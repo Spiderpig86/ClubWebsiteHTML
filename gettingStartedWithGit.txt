@@ -1,0 +1,31 @@
+getting started with git
+
+if you don't have a github account, create one
+contact stanley to get pushing privileges for the repo
+	stanley's slack handle is @serbis
+		slack url: https://sbuwebappclub.slack.com/x-91853354133-91868648130/signup
+download git
+go to your cli: command prompt for windows | terminal for mac
+navigate to the directory you want the project to be in
+	mine is "c:\users\me\" for example
+	you navigate in a cli typically by using the command cd. if you're not familiar with it, a quick google search should clarify it, but basically it stands for "change directory" and it changes the directory you're in in the cli
+		example `cd c:\` will bring you to the c:\ directory; which most computers have
+		`cd c:\users\me\` will bring me to my `me` directory, where i keep the club's website project
+type `git clone https://github.com/SBUWebAndAppClub/ClubWebsite.git`
+	afterwards, you can type the command `dir` to see all your files in the current directory, if you see ClubWebsite, you know it worked
+	*on mac the command is `ls` not `dir`
+change to the ClubWebsite directory
+now, open this file on your computer -- it's in your ClubWebsite folder because this file is part of the repo you just cloned
+make some changes to this file -- anything you think i left out, or will make it easier for future readers
+go back to the cli
+type git status
+you should see this file in red
+	this means git knows you made changes to it
+type `git add gettingStartedWithGit.txt`
+type `git commit -m"within these quotation marks put a message that describes the changes you made"`
+type `git push`
+	it will ask you for your username and password
+refresh the github page you're using to look at this file in the browser
+if you see your changes, congratulations, you've successfully pushed changes to the club's repo
+next step -- create a website
+	
