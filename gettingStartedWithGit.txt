@@ -8,7 +8,7 @@ download git
 go to your cli: command prompt for windows | terminal for mac
 navigate to the directory you want the project to be in
 	mine is "c:\users\me\" for example
-	you navigate in a cli typically by using the command cd. if you're not familiar with it, a quick google search should clarify it, but basically it stands for "change directory" and it changes the directory you're in in the cli
+	you navigate in a cli typically by using the command `cd`. if you're not familiar with it, a quick google search should clarify it, but basically it stands for "change directory" and it changes the directory you're in in the cli
 		example `cd c:\` will bring you to the c:\ directory; which most computers have
 		`cd c:\users\me\` will bring me to my `me` directory, where i keep the club's website project
 type `git clone https://github.com/SBUWebAndAppClub/ClubWebsite.git`
