@@ -9,32 +9,67 @@ This is a website for the club to serve as our first project and showcase for ou
 3. Idea submission board for the public.
 4. Maybe a club logo?
 
-### Front-end TODO
-1. index.html (The main page)
-  - regular.css (Standard css for default view)
-  - mobile.css (Mobile optimized css)
-  - app.js (If we need it)
-2. members.html
-  - CSS file naming pending
-3. projects.html
-  - CSS file naming pending
-4. ideas.html
-  - CSS file naming pending
+### Haven't Started:
+  - Member.java  
+  - members.html  
+  - members.css  
+  - Project.java  
+  - Framework.java  
+  - MemberController.java
+  - ideas.html
+  - projects.html
+  - index.html
   
-### Back-end TODO
-1. Member.java (Stores member data)
-   - Basic strucutre
-   ```Java
-      String mFullname
-      String mEmail
-      String mMajor
-      String mImagePath
-      List<Project> mProjects 
-      HashMap<String, String> mUrls 
-      ```
-2. MemberController.java
-3. Project.java
-4. Framework.java
+
+
+### In Progress:
+
+
+
+### Finished:
+
+
+
+# Webpages
+1. Members
+2. Projects
+3. Homepage
+4. Idea Submissions
+
+## Members Webpage 
+  - Member.java:
+
+    ```
+    String mFullname
+    String mEmail  
+    String mMajor  
+    String mImagePath  
+    List<Project> mProjects  
+    HashMap<String, String> mUrls
+    ```
+  - members.html  
+  - members.css  
+  - Project.java  
+  - Framework.java  
+  - MemberController.java
+  
+## Projects Webpage
+  - projects.html
+   - CSS file naming pending
+
+
+## Homepage
+   - index.html
+     - regular.css (Standard css for default view)
+     - mobile.css (Mobile optimized css)
+     - app.js (If we need it)
+    
+
+
+## Idea Submissions Webpage
+  - ideas.html
+   - CSS file naming pending
+
 
 ### Resources
 
