@@ -1,1 +1,21 @@
 /* CSS FOR THE NORMAL VIEW OF THE WEBSITE GOES HERE */
+
+
+/* GLOBAL PROPERTIES */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #222222;
+}
+
+/* LANDING */
+#socialLink li  { /* Style the list items in the social nav menu */
+    display: inline; /* Keeps the list horizontal */
+}
+
+#topMenu li {
+    display: inline;
+}
