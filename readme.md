@@ -20,7 +20,7 @@ This is a website for the club to serve as our first project and showcase for ou
   - projects.html
   - index.html
   
-
+# Note: Html files have to be inside src/main/resources/templates/ in order for Spring to see them!
 
 ### In Progress:
 
@@ -72,9 +72,6 @@ This is a website for the club to serve as our first project and showcase for ou
    - Also handles "projects/{name of project}"
   -ProjectService.java
    - Pulls requested data from wherever it's stored.
-   - Two choices of data collection:
-    - Get all projects.
-    - Get one project by it's name.
   
 
 
