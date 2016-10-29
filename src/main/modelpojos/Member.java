@@ -1,4 +1,4 @@
-package modelpojos;
+package main.modelpojos;
 
 /**
  * Created by me on 10/28/2016.
