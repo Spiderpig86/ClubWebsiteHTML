@@ -56,6 +56,26 @@ This is a website for the club to serve as our first project and showcase for ou
 ## Projects Webpage
   - projects.html
    - CSS file naming pending
+   - Redirects to project.html
+   - Lists all fields in project.java except the list of members.
+   - Possible final look of page(Tell me what you think!) https://s10.postimg.org/ctojbi9x5/possiblelookforprojectspage.png
+  - project.html (View of one entire project)
+   - CSS file?
+  - Project.java
+   - Project Name
+   - Description
+   - Image URL
+   - Creator (Represented as a member class)
+   - ArrayList of members.
+  - ProjectController.java
+   - Routes users who type in "projects/" in URL bar.
+   - Also handles "projects/{name of project}"
+  -ProjectService.java
+   - Pulls requested data from wherever it's stored.
+   - Two choices of data collection:
+    - Get all projects.
+    - Get one project by it's name.
+  
 
 
 ## Homepage
