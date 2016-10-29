@@ -10,7 +10,7 @@
 
     <!-- CSS -->
     <!-- Just adding some possible font choices from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Hind+Siliguri" rel="stylesheet">
     <link href="css/regular.css" rel="stylesheet" type="text/css">
     <!-- Different font families are separated by the '|' character -->
 
@@ -26,66 +26,81 @@
 
 <body>
 
-    <div id="landing">
-        <!-- Div to hold the Hero Image -->
-        <div id="bg"></div>
+<div id="landing">
+    <!-- Div to hold the Hero Image -->
+    <div id="bg"></div>
 
-        <!-- Social media links? -->
-        <div id="socialLinks">
-            <ul>
-                <!-- Unordered list structure -->
-                <a href="https://facebook.com">
-                    <!-- Always wrap the link around the list item -->
-                    <li>Facebook</li>
-                </a>
-                <a href="https://twitter.com">
-                    <li>Twitter</li>
-                </a>
-                <a href="https://plus.google.com">
-                    <li>Google+</li>
-                </a>
-                <a href="https://myspace.com">
-                    <li>Mypsace (still alive)</li>
-                </a>
-            </ul>
-        </div>
+    <!-- The shadow menu that will drop down when scrolling down -->
+    <div id="staticMenu" class="hidden"> <!-- Hidden class hides the menu initially -->
+        <ul id="menuList">
+            <!-- Unordered list of the menu items -->
+            <a href="#members">
+                <!-- href points to a div in the website for the browser to scroll down to -->
+                <li class="headitem">Members</li>
+                <!-- The actual menu item itself -->
+            </a>
 
-        <!-- Basic structure for the navigation menu -->
-        <div id="topMenu">
-            <!-- Container for the actual menu. -->
+            <a href="/projects.html">
+                <li>Projects</li>
+            </a>
 
-            <ul id="menuList">
-                <!-- Unordered list of the menu items -->
-                <a href="#members">
-                    <!-- href points to a div in the website for the browser to scroll down to -->
-                    <li class="headitem">Members</li>
-                    <!-- The actual menu item itself -->
-                </a>
-
-                <a href="/projects.html">
-                    <li>Projects</li>
-                </a>
-
-                <div id="hamburgerButton">
-                    <!-- Hamburger button. Only shown in the mobile view -->
-                    <i class="menuicon fa fa-bars" aria-hidden="true"></i>
-                    <!-- Icon tag. Font Awesome needs to be imported to use this -->
-                </div>
-            </ul>
-        </div>
-
-
-        <!-- Landing content should go here -->
-        <div id="brand" class="section">
-            <h1>SBU Web and App Club</h1>
-        </div>
-
+            <div id="hamburgerButton">
+                <!-- Hamburger button. Only shown in the mobile view -->
+                <i class="menuicon fa fa-bars" aria-hidden="true"></i>
+                <!-- Icon tag. Font Awesome needs to be imported to use this -->
+            </div>
     </div>
 
-    <!-- The first section of the website -->
-    <div id="someSection" class="section">
-
+    <!-- Social media links? -->
+    <div id="socialLinks">
+        <ul>
+            <!-- Unordered list structure -->
+            <a href="https://facebook.com">
+                <!-- Always wrap the link around the list item -->
+                <li>Facebook</li>
+            </a>
+            <a href="https://twitter.com">
+                <li>Twitter</li>
+            </a>
+            <a href="https://plus.google.com">
+                <li>Google+</li>
+            </a>
+            <a href="https://myspace.com">
+                <li>Mypsace (still alive)</li>
+            </a>
+        </ul>
     </div>
+
+    <!-- Basic structure for the navigation menu -->
+    <div id="topMenu">
+        <!-- Container for the actual menu. -->
+
+        <ul id="menuList">
+            <!-- Unordered list of the menu items -->
+            <a href="#members">
+                <!-- href points to a div in the website for the browser to scroll down to -->
+                <li class="headitem">Members</li>
+                <!-- The actual menu item itself -->
+            </a>
+
+            <a href="/projects.html">
+                <li>Projects</li>
+            </a>
+        </ul>
+    </div>
+
+
+    <!-- Landing content should go here -->
+    <div id="brand" class="section">
+        <h1>SBU Web<br>and App Club</h1>
+    </div>
+
+</div>
+
+<!-- The first section of the website -->
+<div id="someSection" class="section">
+
+</div>
 
 </body>
 
