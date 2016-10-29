@@ -20,7 +20,7 @@ This is a website for the club to serve as our first project and showcase for ou
   - projects.html
   - index.html
   
-# Note: Html files have to be inside src/main/resources/templates/ in order for Spring to see them!
+#### Note: Html files have to be inside src/main/resources/templates/ in order for Spring to see them!
 
 ### In Progress:
 
