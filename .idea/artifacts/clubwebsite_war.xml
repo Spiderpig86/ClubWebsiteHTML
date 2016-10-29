@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="clubwebsite:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="spring-orm.war">
+      <element id="artifact" artifact-name="clubwebsite:war exploded" />
+    </root>
+  </artifact>
+</component>
