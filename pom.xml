@@ -14,8 +14,6 @@
         <version>1.4.1.RELEASE</version>
     </parent>
 
-
-
     <dependencies>
 
         <dependency>
@@ -56,6 +54,14 @@
             <artifactId>spring-webmvc</artifactId>
             <version>4.3.3.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
 
