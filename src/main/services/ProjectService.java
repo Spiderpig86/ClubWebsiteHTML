@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import lombok.Getter;
 import org.springframework.stereotype.Service;
 
 import main.modelpojos.Member;
@@ -16,19 +17,46 @@ import main.modelpojos.Project;
  */
 @Service
 public class ProjectService {
-	
+	/** WILL BE CONVERTED TO READ AND WRITE ON DATABASE **/
+
+	@Getter
+	private final List<Project> allProjects;
+
+	public ProjectService() {
+		this.allProjects = new ArrayList<>();
+	}
+
+	public void addProject(Project project) {
+		allProjects.add(project);
+	}
+
+	public void deleteProject(Project project) {
+		allProjects.remove(project);
+	}
+
+	public Project getProjectByName(String name) throws NullPointerException {
+		return allProjects.stream()
+				.filter(project -> project.getName().equalsIgnoreCase(name))
+				.findAny()
+				.orElse(null);
+	}
+
+	/***** Not really sure how the stuff below is needed? *****/
+
+	/*-------------------------------------------------------------*/
+
 	/**
 	 * Returns an ArrayList of {@link Project}s.
 	 * 
 	 * @return List of all projects that were found.
 	 */
-	public List<Project> getAllProjects() {
+	/*public List<Project> getAllProjects() {
 		ArrayList<Project> projects = new ArrayList<>();
 		for(int counter = 0; counter < 10; counter++){
 			projects.add(createNewProject());
 		}
 		return projects;
-	}
+	}*/
 	
 	/**
 	 * Takes a name and returns a {@link Project} object.
@@ -37,31 +65,31 @@ public class ProjectService {
 	 * @param name The name of the project.
 	 * @return Project with corresponding name.
 	 */
-	public Project getProjectByName(String name){
+	/*public Project getProjectByName2(String name){
 		return createNewProject();
-	}
+	}*/
 	
 	private final static Random r = new Random();
 	private final static Member[] members = new Member[20];
 	{
 		for(int index = 0; index < members.length; index++){
 			members[index] = new Member();
-			members[index].name = randomString();
+			members[index].setFullName(randomString());
 		}
 	}
 	
-	private static Project createNewProject(){
+	/*private static Project createNewProject(){
 		Project p = new Project();
 		p.name = randomString();
 		p.description = "placeholder stuff lmao";
-		p.imageURL = "wut";
+		p.imagePath = "wut";
 		p.creator = members[r.nextInt(20)];
 		p.workingMembers = new ArrayList<Member>();
 		for(Member m : members){
 			if(r.nextBoolean())p.workingMembers.add(m);
 		}
 		return p;
-	}
+	}*/
 	
 	/**
 	 * Creates a random String between 1 to 20 characters long.

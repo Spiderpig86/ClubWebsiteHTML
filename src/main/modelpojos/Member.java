@@ -13,13 +13,13 @@ public class Member {
 	private Integer id;
 
 	@Getter
-	private final Set<Project> projects;
+	private final List<Project> projects;
 
 	@Getter
 	private final Map<String, String> urls;
 
 	public Member() {
-		this.projects = new HashSet<>();
+		this.projects = new ArrayList<>();
 		this.urls = new HashMap<>();
 	}
 
@@ -28,7 +28,7 @@ public class Member {
         this.email = email;
         this.major = major;
         this.imagePath = imagePath;
-        this.projects = new HashSet<>();
+        this.projects = new ArrayList<>();
         this.urls = new HashMap<>();
     }
 }
