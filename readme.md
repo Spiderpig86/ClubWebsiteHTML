@@ -10,20 +10,19 @@ This is a website for the club to serve as our first project and showcase for ou
 4. Maybe a club logo?
 
 ### Haven't Started:
-  - Member.java  
-  - members.html  
-  - members.css  
   - Project.java  
   - Framework.java  
   - MemberController.java
   - ideas.html
   - projects.html
-  - index.html
   
 #### Note: Html files have to be inside src/main/resources/templates/ in order for Spring to see them!
 
 ### In Progress:
-
+  - index.html
+  - Member.java  
+  - members.html  
+  - members.css  
 
 
 ### Finished:
