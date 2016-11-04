@@ -1,5 +1,3 @@
-THIS IS A TEST
-
 # SBU Web and App Club Website
 
 This is a website for the club to serve as our first project and showcase for our members and upcoming projects. The website is constructed with a combination of Spring (Java Back-end) and HTML, CSS, and Javascript (Front-end) with a responsive design.
