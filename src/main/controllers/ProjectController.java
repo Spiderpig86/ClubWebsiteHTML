@@ -1,5 +1,7 @@
 package main.controllers;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,13 +18,10 @@ import main.services.ProjectService;
  */
 @Controller
 public class ProjectController {
-	
-	private ProjectService projectService;
-	
+
+    @Getter @Setter
     @Autowired
-    public void setProjectService(ProjectService projectService) {
-        this.projectService = projectService;
-    }
+	private ProjectService projectService;
 	
     /**
      * Creates the project list page.
@@ -30,8 +29,8 @@ public class ProjectController {
      * @return Name of the template.
      */
     @RequestMapping(value = "/projects", method = RequestMethod.GET)
-    public String list(Model model){
-    	model.addAttribute("projects", projectService.getAllProjects());
+    public String projectList(Model model){
+    	model.addAttribute("projects", projectService.getProjects());
     	return "projects";
     }
     

@@ -15,22 +15,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MemberController {
-    @Getter @Setter @Autowired
+    @Getter @Setter
+    @Autowired
     private MemberService memberService;
 
-    public MemberController() {
-        this.memberService = new MemberService();
-    }
-
     @RequestMapping(value = "/members")
-    public String getMemberListHTML(Model model) {
-        //model.addAttribute("memberList", memberService.getMembers());
+    public String memberList(Model model) {
+        model.addAttribute("memberList", memberService.getMembers());
         return "/members";
     }
 
     @RequestMapping(value = "/member/{id}")
-    public String getMemberHTML(@PathVariable Integer id, Model model) {
-        //model.addAttribute("member", memebrService.getMemberById(id));
+    public String member(@PathVariable Integer id, Model model) {
+        model.addAttribute("member", memberService.getMemberByID(id));
         return "/member";
     }
 }

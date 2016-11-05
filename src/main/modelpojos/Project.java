@@ -1,22 +1,22 @@
 package main.modelpojos;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
-/**
- * Contains all the data for a single project entity.
- * 
- * @author Daniel Eliasinski
- */
-
+@Entity
+@AllArgsConstructor
 public class Project {
 
 	@Getter @Setter
+	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	public String name;
 
 	@Getter @Setter
@@ -30,14 +30,6 @@ public class Project {
 
 	public final Set<Member> workingMembers;
 
-	public Project(String name, String description, String imagePath, Member creator, HashSet<Member> workingMembers) {
-		this.name = name;
-		this.description = description;
-		this.imagePath = imagePath;
-		this.creator = creator;
-		this.workingMembers = workingMembers;
-	}
-
 	public Project(String name, String description, Member creator) {
 		this(name, description, "<insert default project image path>.png", creator, null);
 	}
@@ -45,7 +37,5 @@ public class Project {
 	public Set<Member> getWorkingMembers() {
 		return workingMembers != null ? workingMembers : new HashSet<Member>() {};
 	}
-
-
 
 }
