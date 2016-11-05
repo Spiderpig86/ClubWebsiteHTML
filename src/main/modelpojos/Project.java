@@ -5,12 +5,6 @@ import javax.persistence.Id;
 
 import main.modelpojos.validation.NotEqual;
 
-/**
- * Contains all the data for a single project entity.
- * 
- * @author Daniel Eliasinski
- */
-
 @Entity
 public class Project {
 	

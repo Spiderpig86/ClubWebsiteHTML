@@ -1,32 +1,80 @@
 package main.modelpojos;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import lombok.Getter;
 
 @Entity
 public class Member {
+
+	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	private final Integer id;
+
+	private String fullName;
+	private String email, major, imagePath;
 	
-	public Member(String fullName, String email, String major, String imagePath, String[] projects, String[] urls) {
+	//The database has trouble persisting java objects. Until we find a way, don't use them.(Or use java arrays)
+	//private final List<Project> projects;
+	//private final Map<String, String> urls;
+
+	public Member(Integer id) {
+		this.id = id;
+		//this.projects = new ArrayList<>();
+		//this.urls = new HashMap<>();
+	}
+
+	public Member(Integer id, String fullName, String email, String major, String imagePath) {
+		this.id = id;
         this.fullName = fullName;
         this.email = email;
         this.major = major;
         this.imagePath = imagePath;
-        this.projects = projects;
-        this.urls = urls;
+        //this.projects = new ArrayList<>();
+        //this.urls = new HashMap<>();
     }
-	
-	@Getter
-	@Id
-	private String fullName;
-	
-	@Getter
-	private String email, major, imagePath;
 
-	@Getter
-	private String[] projects;
+    public Integer getID() {
+		return id;
+	}
 
-	@Getter
-	private String[] urls;
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getMajor() {
+		return major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
+
+    /*public List<Project> getProjects() {
+		return projects;
+	}
+
+    public Map<String, String> getURLS() {
+		return urls;
+	}*/
 }

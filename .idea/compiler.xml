@@ -25,7 +25,7 @@
         <module name="clubwebsite" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="clubwebsite" target="1.6" />
     </bytecodeTargetLevel>
   </component>
