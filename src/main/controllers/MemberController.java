@@ -1,13 +1,12 @@
 package main.controllers;
 
-import lombok.Getter;
-import lombok.Setter;
-import main.services.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import main.services.MemberService;
 
 /**
  * Created by me on 10/28/2016.
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MemberController {
-    @Getter @Setter @Autowired
+    @Autowired
     private MemberService memberService;
 
     public MemberController() {

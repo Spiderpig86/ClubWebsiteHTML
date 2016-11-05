@@ -1,12 +1,9 @@
 package main.modelpojos;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import main.modelpojos.validation.NotEqual;
 
 /**
  * Contains all the data for a single project entity.
@@ -14,38 +11,70 @@ import java.util.Set;
  * @author Daniel Eliasinski
  */
 
+@Entity
 public class Project {
+	
+	@Id
+	@NotEqual(check = "create", message = "You can not name your string 'create'!")
+	@NotEqual(check = "", message = "Can't be blank!")
+	private String name;
 
-	@Getter @Setter
-	public String name;
+	private String description;
+	
+	private String imagePath;
+	
+	@NotEqual(check = "", message = "Can't be blank!")
+	private String creator;
+	
+	private String[] workingMembers;
+	
+	private int version;
 
-	@Getter @Setter
-	public String description;
+	public String getName() {
+		return name;
+	}
 
-	@Getter @Setter
-	public String imagePath;
+	public String getDescription() {
+		return description;
+	}
 
-	@Getter
-	public final Member creator;
+	public String getImagePath() {
+		return imagePath;
+	}
 
-	public final Set<Member> workingMembers;
+	public String getCreator() {
+		return creator;
+	}
 
-	public Project(String name, String description, String imagePath, Member creator, HashSet<Member> workingMembers) {
+	public String[] getWorkingMembers() {
+		return workingMembers;
+	}
+
+	public int getVersion() {
+		return version;
+	}
+
+	public void setName(String name) {
 		this.name = name;
+	}
+
+	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public void setImagePath(String imagePath) {
 		this.imagePath = imagePath;
+	}
+
+	public void setCreator(String creator) {
 		this.creator = creator;
+	}
+
+	public void setWorkingMembers(String[] workingMembers) {
 		this.workingMembers = workingMembers;
 	}
 
-	public Project(String name, String description, Member creator) {
-		this(name, description, "<insert default project image path>.png", creator, null);
+	public void setVersion(int version) {
+		this.version = version;
 	}
-
-	public Set<Member> getWorkingMembers() {
-		return workingMembers != null ? workingMembers : new HashSet<Member>() {};
-	}
-
-
-
 }

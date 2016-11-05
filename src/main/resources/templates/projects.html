@@ -9,25 +9,24 @@
 <div class="container">
     <div th:if="${not #lists.isEmpty(projects)}">
         <h2>Product List (I don't know how to code .css files so for now it's really ugly)</h2>
-        <h2>If you get an error clicking on  a link it's probably 'cause the random string generator created a slash and screwed up the address.</h2>
         <table class="table table-striped">
             <tr>
-                <th>Name(Currently Randomized)...............</th>
+                <th>Name.....................................</th>
                 <th>Description..............................</th>
                 <th>Image URL................................</th>
                 <th>Creator..................................</th>
-                <th>View More links...(Takes you to /projects/{name_of_project})</th>
+                <th>Project Pages</th>
             </tr>
             <tr th:each="project : ${projects}">
                 <td th:text="${project.name}">Name</td>
                 <td th:text="${project.description}">Description</td>
-                <td th:text="${project.imageURL}">Image URL</td>
-                <td th:text="${project.creator.name}">Moderators</td>
+                <td th:text="${project.imagePath}">Image URL</td>
+                <td th:text="${project.creator}">Creator</td>
                 <td><a th:href="${'/projects/' + project.name}">View More...</a></td>
             </tr>
         </table>
- 
     </div>
 </div>
+<a href="/projects/create">Create a project...</a>
 </body>
 </html>

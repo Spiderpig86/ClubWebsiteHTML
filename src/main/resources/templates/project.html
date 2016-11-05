@@ -6,11 +6,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<h2>Don't be surprised when the name of the project is different from the URL...(Check the javadocs)</h2>
 	<h2 th:text="'Project Name: ' + ${project.name}">Project Name</h2>
 	<h4 th:text="'Description: ' + ${project.description}">Project Description</h4>
-	<h4 th:text="'Image URL: ' + ${project.imageURL}">Image URL</h4>
-	<h4 th:text="'Creator Name: ' + ${project.creator.name}">Creator Name</h4>
+	<h4 th:text="'Image URL: ' + ${project.imagePath}">Image URL</h4>
+	<h4 th:text="'Creator Name: ' + ${project.creator}">Creator Name</h4>
 	<div th:if="${not #lists.isEmpty(project.workingMembers)}">
         <h3>Members List</h3>
         <table class="table table-striped">

@@ -1,34 +1,32 @@
 package main.modelpojos;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import lombok.Getter;
-import lombok.Setter;
 
-import java.util.*;
-
+@Entity
 public class Member {
-	@Getter @Setter
-	private String fullName, email, major, imagePath;
-
-	@Getter @Setter
-	private Integer id;
-
-	@Getter
-	private final List<Project> projects;
-
-	@Getter
-	private final Map<String, String> urls;
-
-	public Member() {
-		this.projects = new ArrayList<>();
-		this.urls = new HashMap<>();
-	}
-
-	public Member(String fullName, String email, String major, String imagePath) {
+	
+	public Member(String fullName, String email, String major, String imagePath, String[] projects, String[] urls) {
         this.fullName = fullName;
         this.email = email;
         this.major = major;
         this.imagePath = imagePath;
-        this.projects = new ArrayList<>();
-        this.urls = new HashMap<>();
+        this.projects = projects;
+        this.urls = urls;
     }
+	
+	@Getter
+	@Id
+	private String fullName;
+	
+	@Getter
+	private String email, major, imagePath;
+
+	@Getter
+	private String[] projects;
+
+	@Getter
+	private String[] urls;
 }
