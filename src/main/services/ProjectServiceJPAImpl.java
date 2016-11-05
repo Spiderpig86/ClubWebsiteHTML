@@ -1,14 +1,11 @@
 package main.services;
 
-import lombok.Getter;
-import lombok.Setter;
 import main.modelpojos.Project;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
 public class ProjectServiceJPAImpl implements ProjectService {
-    @Getter @Setter
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -31,5 +28,13 @@ public class ProjectServiceJPAImpl implements ProjectService {
     @Override
     public List<Project> getProjects() {
         return entityManager.createQuery("from Project", Project.class).getResultList();
+    }
+
+    public EntityManager getEntityManager() {
+        return entityManager;
+    }
+
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 }

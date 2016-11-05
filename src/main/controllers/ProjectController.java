@@ -1,7 +1,5 @@
 package main.controllers;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,15 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import main.services.ProjectService;
 
-/**
- * 
- * 
- * @author Daniel Eliasinski
- */
 @Controller
 public class ProjectController {
-
-    @Getter @Setter
     @Autowired
 	private ProjectService projectService;
 	
@@ -38,5 +29,13 @@ public class ProjectController {
     public String project(@PathVariable String name, Model model){
     	model.addAttribute("project", projectService.getProjectByName(name));
     	return "project";
+    }
+
+    public ProjectService getProjectService() {
+        return projectService;
+    }
+
+    public void setProjectService(ProjectService projectService) {
+        this.projectService = projectService;
     }
 }

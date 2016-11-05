@@ -1,7 +1,5 @@
 package main.services;
 
-import lombok.Getter;
-import lombok.Setter;
 import main.modelpojos.Member;
 import org.springframework.stereotype.Service;
 import javax.persistence.EntityManager;
@@ -11,7 +9,6 @@ import java.util.List;
 @Service
 public class MemberServiceJPAImpl implements MemberService {
 
-    @Getter @Setter
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -23,5 +20,13 @@ public class MemberServiceJPAImpl implements MemberService {
     @Override
     public Member getMemberByID(Integer id) {
         return entityManager.find(Member.class, id);
+    }
+
+    public EntityManager getEntityManager() {
+        return entityManager;
+    }
+
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 }

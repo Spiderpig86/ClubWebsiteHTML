@@ -1,27 +1,18 @@
 package main.modelpojos;
 
-import lombok.Getter;
-import lombok.Setter;
 import javax.persistence.*;
 import java.util.*;
 
 @Entity
 public class Member {
 
-	@Getter
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private final Integer id;
 
-	@Getter @Setter
 	private String fullName;
-
-	@Getter @Setter
 	private String email, major, imagePath;
 
-	@Getter
 	private final List<Project> projects;
-
-	@Getter
 	private final Map<String, String> urls;
 
 	public Member(Integer id) {
@@ -39,4 +30,48 @@ public class Member {
         this.projects = new ArrayList<>();
         this.urls = new HashMap<>();
     }
+
+    public Integer getID() {
+		return id;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getMajor() {
+		return major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
+
+    public List<Project> getProjects() {
+		return projects;
+	}
+
+    public Map<String, String> getURLS() {
+		return urls;
+	}
 }
