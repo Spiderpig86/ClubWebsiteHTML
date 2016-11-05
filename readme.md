@@ -10,11 +10,8 @@ This is a website for the club to serve as our first project and showcase for ou
 4. Maybe a club logo?
 
 ### Haven't Started:
-  - Project.java  
   - Framework.java  
-  - MemberController.java
   - ideas.html
-  - projects.html
   
 #### Note: Html files have to be inside src/main/resources/templates/ in order for Spring to see them!
 
@@ -23,11 +20,14 @@ This is a website for the club to serve as our first project and showcase for ou
   - Member.java  
   - members.html  
   - members.css  
-
+  - MemberController.java
 
 ### Finished:
-
-
+  - Project.java  
+  - ProjectController.java
+  - projects.html (Needs CSS)
+  - project.html (Needs CSS)
+  - project_create.html (Needs CSS)
 
 # Webpages
 1. Members
@@ -53,27 +53,20 @@ This is a website for the club to serve as our first project and showcase for ou
   - MemberController.java
   
 ## Projects Webpage
-  - projects.html
-   - CSS file naming pending
-   - Redirects to project.html
-   - Lists all fields in project.java except the list of members.
-   - Possible final look of page(Tell me what you think!) https://s10.postimg.org/ctojbi9x5/possiblelookforprojectspage.png
-  - project.html (View of one entire project)
-   - CSS file?
-  - Project.java
-   - Project Name
-   - Description
-   - Image URL
-   - Creator (Represented as a member class)
-   - ArrayList of members.
-  - ProjectController.java
-   - Routes users who type in "projects/" in URL bar.
-   - Also handles "projects/{name of project}"
-  -ProjectService.java
-   - Pulls requested data from wherever it's stored.
-  
-
-
+   - /projects:
+     List of all projects
+   - /projects/{project_name}:
+     Full page dedicated to one project.
+   - /projects/create (method = POST):
+     Where da magic happens :)
+   - /projects/create (method = GET):
+     The actual page where you can create your project.
+     Fields are:
+    - Project Name (Can't be 'create' or will interfere with navigation.)(Can't be blank)(Can't be the same as one that already exists)
+    - Project Description
+    - Image URL (Has a default one that we specify)
+    - Creator (Can't be blank)
+    
 ## Homepage
    - index.html
      - regular.css (Standard css for default view)
