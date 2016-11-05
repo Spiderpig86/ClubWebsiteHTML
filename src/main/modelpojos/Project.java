@@ -3,6 +3,7 @@ package main.modelpojos;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import main.modelpojos.validation.NoChar;
 import main.modelpojos.validation.NotEqual;
 
 @Entity
@@ -11,6 +12,8 @@ public class Project {
 	@Id
 	@NotEqual(check = "create", message = "You can not name your string 'create'!")
 	@NotEqual(check = "", message = "Can't be blank!")
+	@NoChar(check = '/')
+	@NoChar(check = '\\')
 	private String name;
 
 	private String description;
