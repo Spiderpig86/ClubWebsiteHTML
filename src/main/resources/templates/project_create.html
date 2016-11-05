@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Project Submission</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>New Project</h1>
+	<form action="#" th:action="@{/projects/create}" th:object="${project}" method="post">
+		<table>
+			<tr>
+				<td>Project Name:</td>
+				<td><input type="text" th:field="*{name}" /></td>
+				<td th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></td>
+			</tr>
+			<tr>
+				<td>Description:</td>
+				<td><input type="text" th:field="*{description}" /></td>
+			</tr>
+			<tr>
+				<td>Image URL:</td>
+				<td><input type="text" th:field="*{imagePath}" /></td>
+			</tr>
+			<tr>
+				<td>Your Name:</td>
+				<td><input type="text" th:field="*{creator}" /></td>
+				<td th:if="${#fields.hasErrors('creator')}" th:errors="*{creator}">Can not be blank.</td>
+			</tr>
+			<tr>
+				<td><button type="submit">Create!</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
