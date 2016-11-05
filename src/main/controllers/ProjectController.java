@@ -50,6 +50,11 @@ public class ProjectController {
 
 	@RequestMapping(value = "/projects/create", method = RequestMethod.POST)
 	public String createProject(@ModelAttribute @Valid Project project, BindingResult bindingResult) {
+		//Trim Strings
+		project.setName(project.getName().trim());
+		project.setDescription(project.getDescription().trim());
+		project.setImagePath(project.getImagePath().trim());
+		project.setCreator(project.getCreator().trim());
 		// Check if name is taken
 		if (projectService.getProjectByName(project.getName()) != null)
 			bindingResult.rejectValue("name", "error.name", "Name is taken!");
