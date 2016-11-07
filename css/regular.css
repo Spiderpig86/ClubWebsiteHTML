@@ -57,7 +57,7 @@ h1 {
 }
 
 .hidden {
-    display: none;
+    transform: translateY(-100px);
 }
 
 #menuList {
