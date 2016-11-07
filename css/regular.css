@@ -61,6 +61,10 @@ h1 {
     transition: .3s;
 }
 
+#hamburgerButton {
+    display: inline;
+}
+
 #landing a {
     font-family: "Montserrat";
     text-decoration: none;
