@@ -81,6 +81,7 @@ h1 {
     box-shadow: rgba(0,0,0,0.3) 0 0 10px;
     z-index: 999;
     transition: .3s;
+    box-sizing: border-box; /* Needed to keep the navbar width within the confines of the page */
 }
 
 #menuListStatic {
