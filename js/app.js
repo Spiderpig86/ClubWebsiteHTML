@@ -14,10 +14,11 @@ $(window).on('resize', function() { // Make sure the window height updates along
 // Drop the website menu down when the user scrolls past the landing div
 
 $(window).scroll(function() {
-    if ($(document).scrollTop() < $(window).height()) {
-        $('#topMenu').addClass('hidden');
+    if ($(document).scrollTop() < $("#landing").height()) {
+        $('ul#menuList').addClass('hidden');
         //updateMobileMenu(true);
     } else {
-        $('#topMenu').removeClass('hidden');
+        $('ul#menuList').removeClass('hidden');
     }
+    //console.log($(document).scrollTop() + " " + $("#landing").height());
 });

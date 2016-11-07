@@ -33,6 +33,14 @@ h1 {
     bottom: 0;
     font-size: 78px;
     color: #fff;
+    padding: 10px 0;
+}
+
+#landing {
+    margin: 0px;
+}
+
+#landing h1 {
     position: absolute;
     padding: 50px;
 }
@@ -49,6 +57,10 @@ h1 {
     display: inline;
 }
 
+#topMenu {
+    transition: .3s;
+}
+
 #landing a {
     font-family: "Montserrat";
     text-decoration: none;
@@ -58,6 +70,7 @@ h1 {
 
 .hidden {
     transform: translateY(-100px);
+    transition: all .3s;
 }
 
 #menuList {
@@ -67,4 +80,15 @@ h1 {
     width: 100%;
     box-shadow: rgba(0,0,0,0.3) 0 0 10px;
     z-index: 999;
+    transition: .3s;
+}
+
+/* ABOUT */
+
+#about {
+    margin: 50px;
+}
+
+#about p {
+    color: #fff;
 }
