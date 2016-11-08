@@ -15,6 +15,33 @@ body {
 
 }
 
+h1 {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    bottom: 80px;
+    font-size: 78px;
+    color: #fff;
+    padding: 10px 0;
+    text-shadow: 2px 2px 3px rgba(45, 45, 45, 0.21);
+}
+
+h2 {
+    font-family: "Montserrat";
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    bottom: 0;
+}
+
+.divider {
+    border-bottom: 3px solid #ec0d34;
+    position: absolute;
+    bottom: 110px;
+    height: 2px;
+    width: 480px;
+    margin: 0 50px;
+}
+
 /* LANDING */
 
 #bg {
@@ -23,24 +50,16 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    opacity: .75;
+    opacity: .9;
     z-index: -2;
-}
-
-h1 {
-    font-family: 'Montserrat';
-    text-transform: uppercase;
-    bottom: 0;
-    font-size: 78px;
-    color: #fff;
-    padding: 10px 0;
+    backface-visibility: hidden;
 }
 
 #landing {
     margin: 0px;
 }
 
-#landing h1 {
+#landing h1, h2 {
     position: absolute;
     padding: 50px;
 }
@@ -49,23 +68,40 @@ h1 {
     display: inline; /* Keeps the list horizontal */
 }
 
-#staticMenu li {
+.staticMenuItem {
     display: inline;
+    padding: 20px;
+    transition: all .3s;
+}
+
+.staticMenuItem:hover {
+    background-color: rgba(96,96,96,0.6);
+}
+
+#topMenu {
+    position: relative;
+    padding: 30px 0;
+    text-transform: uppercase;
+    background: linear-gradient(to top,rgba(0,0,0,0) 0,rgba(79, 79, 79, 0.4) 50%,rgba(29, 29, 29, 0.7) 100%);
 }
 
 #topMenu li {
     display: inline;
+    padding: 15px 25px;
+    margin: 0 10px;
+    transition: all .3s;
 }
 
-#topMenu {
-    transition: .3s;
+#topMenu li:hover {
+    outline: 3px solid #ec0d34;
+    transition: all .3s;
 }
 
 #landing a {
     font-family: "Montserrat";
     text-decoration: none;
     text-transform: uppercase;
-    color: #222;
+    color: #fff;
 }
 
 .hidden {
@@ -75,7 +111,7 @@ h1 {
 
 #menuList {
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     box-shadow: rgba(0,0,0,0.3) 0 0 10px;
@@ -84,16 +120,22 @@ h1 {
     box-sizing: border-box; /* Needed to keep the navbar width within the confines of the page */
 }
 
-#menuListStatic {
-    item-align: center;
+#topMenuList {
     padding: 20px;
     width: 100%;
     z-index: 999;
 }
 
-.hamburger {
-    display: inline;
-    float: right;
+#hamburgerbutton {
+    display: none; /* Hidden by default */
+}
+
+.red {
+    color: #ec0d34;
+}
+
+#brand {
+    height: 100%;
 }
 
 /* ABOUT */
