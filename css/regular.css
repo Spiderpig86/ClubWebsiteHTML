@@ -53,6 +53,7 @@ h2 {
     opacity: .9;
     z-index: -2;
     backface-visibility: hidden;
+    background-attachment: fixed;
 }
 
 #landing {
@@ -75,7 +76,7 @@ h2 {
 }
 
 .staticMenuItem:hover {
-    background-color: rgba(96,96,96,0.6);
+    background-color: rgba(164, 164, 164, 0.6);
 }
 
 #topMenu {
@@ -118,6 +119,10 @@ h2 {
     z-index: 999;
     transition: .3s;
     box-sizing: border-box; /* Needed to keep the navbar width within the confines of the page */
+}
+
+#menuList a {
+    color: #222 !important; /* Override the original color in the #landing div */
 }
 
 #topMenuList {
