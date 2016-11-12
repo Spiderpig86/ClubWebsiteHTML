@@ -1,4 +1,35 @@
 <!-- Member list, descriptions, and maybe links to Github/LinkedIn -->
 <!-- Include modal dialog for an email form to the users -->
 
-<!-- For avatars, make sure that there is a default image for when the image path is invalid and that the image
+<!-- For avatars, make sure that there is a default image for when the image path is invalid and that the image -->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SBU Web and App Club Members</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <div th:if="${not #lists.isEmpty(members)}">
+        <h2>Members</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Name.....................................</th>
+                <th>Email....................................</th>
+                <th>Major....................................</th>
+                <th>Image Path...............................</th>
+                <th>Member Pages</th>
+            </tr>
+            <tr th:each="member : ${members}">
+                <td th:text="${member.fullName}">Name</td>
+                <td th:text="${member.email}">Email</td>
+                <td th:text="${member.major}">Major</td>
+                <td th:text="${member.imagePath}">Image Path</td>
+                <td><a th:href="${'/member/' + member.id}">View More...</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

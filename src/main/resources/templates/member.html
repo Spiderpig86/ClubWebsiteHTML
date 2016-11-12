@@ -1,0 +1,31 @@
+<!-- List upcoming projects that the club and individual members will be working on. -->
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title text="${member.fullName}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h2 th:text="'Member Name: ' + ${member.fullName}">Project Name</h2>
+	<h4 th:text="'Email: ' + ${member.email}">Project Description</h4>
+	<h4 th:text="'Major: ' + ${member.major}">Image URL</h4>
+	<h4 th:text="'Image Path: ' + ${member.imagePath}">Creator Name</h4>
+	<div th:if="${not #lists.isEmpty(member.projects)}">
+        <h3>Members List</h3>
+        <table class="table table-striped">
+            <tr th:each="project : ${member.projects}">
+                <td th:text="'Project Name: ' + ${project.name}">Project Name</td>
+            </tr>
+        </table>
+    </div>
+    <div th:if="${not #lists.isEmpty(member.urls)}">
+        <h3>URL List</h3>
+        <table class="table table-striped">
+            <tr th:each="url : ${member.urls}">
+                <td><a th:href="${#strings.substringBefore(url,' ')}" th:text="${#strings.substringAfter(url,' ')}">URL</a></td>
+            </tr>
+        </table>
+    </div>
+    <a href="/members">Back...</a>
+</body>
+</html>

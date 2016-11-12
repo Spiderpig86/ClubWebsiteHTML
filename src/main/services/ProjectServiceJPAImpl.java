@@ -41,4 +41,12 @@ public class ProjectServiceJPAImpl implements ProjectService {
 	public void deleteProject(Project project) {
 		
 	}
+
+	@Override
+	public void updateProject(Project project) {
+		EntityManager em = emf.createEntityManager();
+    	em.getTransaction().begin();
+    	em.merge(project);
+    	em.getTransaction().commit();
+	}
 }

@@ -1,17 +1,12 @@
 package main.controllers;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import main.modelpojos.Project;
 import main.services.ProjectService;
 
 @Controller
@@ -37,13 +32,12 @@ public class ProjectController {
 		return "project";
 	}
 
-	@RequestMapping(value = "/projects/create", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/projects/create", method = RequestMethod.GET)
 	public String createProjectPage(Model model) {
 		Project project = new Project();
 		project.setName("Project Name");
 		project.setDescription("Add Description...");
 		project.setImagePath("Default_Image_Path.png");
-		project.setCreator("Your Name");
 		model.addAttribute("project", project);
 		return "project_create";
 	}
@@ -54,7 +48,6 @@ public class ProjectController {
 		project.setName(project.getName().trim());
 		project.setDescription(project.getDescription().trim());
 		project.setImagePath(project.getImagePath().trim());
-		project.setCreator(project.getCreator().trim());
 		// Check if name is taken
 		if (projectService.getProjectByName(project.getName()) != null)
 			bindingResult.rejectValue("name", "error.name", "Name is taken!");
@@ -71,5 +64,5 @@ public class ProjectController {
 		// Send to the database.
 		projectService.createProject(project);
 		return "redirect:/projects/" + project.getName();
-	}
+	}*/
 }

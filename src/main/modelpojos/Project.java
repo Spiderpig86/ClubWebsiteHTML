@@ -1,30 +1,26 @@
 package main.modelpojos;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
-import main.modelpojos.validation.NoChar;
-import main.modelpojos.validation.NotEqual;
+import javax.persistence.ManyToMany;
+import javax.persistence.Version;
 
 @Entity
 public class Project {
 	
 	@Id
-	@NotEqual(check = "create", message = "You can not name your string 'create'!")
-	@NotEqual(check = "", message = "Can't be blank!")
-	@NoChar(check = '/')
-	@NoChar(check = '\\')
 	private String name;
 
 	private String description;
 	
 	private String imagePath;
 	
-	@NotEqual(check = "", message = "Can't be blank!")
-	private String creator;
+	@ManyToMany(mappedBy="projects")
+	private Set<Member> workingMembers;
 	
-	private String[] workingMembers;
-	
+	@Version
 	private int version;
 
 	public String getName() {
@@ -37,14 +33,6 @@ public class Project {
 
 	public String getImagePath() {
 		return imagePath;
-	}
-
-	public String getCreator() {
-		return creator;
-	}
-
-	public String[] getWorkingMembers() {
-		return workingMembers;
 	}
 
 	public int getVersion() {
@@ -63,11 +51,11 @@ public class Project {
 		this.imagePath = imagePath;
 	}
 
-	public void setCreator(String creator) {
-		this.creator = creator;
+	public Set<Member> getWorkingMembers() {
+		return workingMembers;
 	}
 
-	public void setWorkingMembers(String[] workingMembers) {
+	public void setWorkingMembers(Set<Member> workingMembers) {
 		this.workingMembers = workingMembers;
 	}
 

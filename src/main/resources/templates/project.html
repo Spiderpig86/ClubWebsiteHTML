@@ -9,12 +9,11 @@
 	<h2 th:text="'Project Name: ' + ${project.name}">Project Name</h2>
 	<h4 th:text="'Description: ' + ${project.description}">Project Description</h4>
 	<h4 th:text="'Image URL: ' + ${project.imagePath}">Image URL</h4>
-	<h4 th:text="'Creator Name: ' + ${project.creator}">Creator Name</h4>
 	<div th:if="${not #lists.isEmpty(project.workingMembers)}">
         <h3>Members List</h3>
         <table class="table table-striped">
             <tr th:each="member : ${project.workingMembers}">
-                <td th:text="'Member Name: ' + ${member.name}">Member Name</td>
+                <td th:text="'Member Name: ' + ${member.fullName}">Member Name</td>
             </tr>
         </table>
     </div>

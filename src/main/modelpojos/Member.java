@@ -1,41 +1,58 @@
 package main.modelpojos;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Version;
 
 @Entity
 public class Member {
 
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
-	private final Integer id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
 
 	private String fullName;
 	private String email, major, imagePath;
 	
-	//The database has trouble persisting java objects. Until we find a way, don't use them.(Or use java arrays)
-	//private final List<Project> projects;
-	//private final Map<String, String> urls;
+	@ManyToMany
+	@JoinTable(name="MEMBERS_PROJECTS")
+	private Set<Project> projects;
+	
+	private String[] urls;
+	//The url is first then a space then what the link should say. For this reason, the spaces in the url MUST be escaped.
+	//If it links to another website then ours it must start with http://{url}.com
+	
+	@Version
+	private int version;
 
-	public Member(Integer id) {
-		this.id = id;
-		//this.projects = new ArrayList<>();
-		//this.urls = new HashMap<>();
+    public int getVersion() {
+		return version;
 	}
 
-	public Member(Integer id, String fullName, String email, String major, String imagePath) {
-		this.id = id;
-        this.fullName = fullName;
-        this.email = email;
-        this.major = major;
-        this.imagePath = imagePath;
-        //this.projects = new ArrayList<>();
-        //this.urls = new HashMap<>();
-    }
+	public void setVersion(int version) {
+		this.version = version;
+	}
 
-    public Integer getID() {
+	public Integer getId() {
 		return id;
+	}
+
+	public Set<Project> getProjects() {
+		return projects;
+	}
+
+	public String[] getUrls() {
+		return urls;
+	}
+
+	public void setUrls(String[] urls) {
+		this.urls = urls;
 	}
 
 	public String getFullName() {
@@ -70,11 +87,11 @@ public class Member {
 		this.imagePath = imagePath;
 	}
 
-    /*public List<Project> getProjects() {
-		return projects;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-    public Map<String, String> getURLS() {
-		return urls;
-	}*/
+	public void setProjects(Set<Project> projects) {
+		this.projects = projects;
+	}
 }
