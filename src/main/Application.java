@@ -38,6 +38,7 @@ public class Application implements ApplicationListener<ContextRefreshedEvent> {
 		m1.setMajor("Computer Science");
 		m1.setImagePath("None");
 		m1.setUrls(new String[]{"/projects/Club%20Website Club project", "https://www.google.com/ Google Website"});
+		m1.setBio("Just a kid tryin' to live");
 		m1.setProjects(new HashSet<Project>());
 		
 		Member m2 = new Member();

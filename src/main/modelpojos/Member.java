@@ -19,7 +19,8 @@ public class Member {
 
 	private String fullName;
 	private String email, major, imagePath;
-	
+	private String bio;
+
 	@ManyToMany
 	@JoinTable(name="MEMBERS_PROJECTS")
 	private Set<Project> projects;
@@ -61,6 +62,14 @@ public class Member {
 
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
+	}
+	
+	public String getBio() {
+		return bio;
+	}
+
+	public void setBio(String bio) {
+		this.bio = bio;
 	}
 
 	public String getEmail() {
