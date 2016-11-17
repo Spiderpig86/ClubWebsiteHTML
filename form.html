@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Thymeleaf best form 2k16</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        html,
+        body {
+            font-family: "Raleway", sans-serif;
+            font-size: .75em;
+            background: #eee;
+            height: 100%;
+            width: 100%;
+            background-color: #f3f3f3;
+            display: flex; /* Mainly put in place to create a centered layout */
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            display: block;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        #center {
+            height: 400px;
+            max-width: 50%;
+        }
+
+        #buttonContainer {
+            padding: 10px 10px 10px 0px;
+        }
+
+        .button {
+              position: relative;
+              display: inline-block;
+              padding: 12px 24px;
+              margin: .3em .1em 1em 0;
+              vertical-align: middle;
+              color: #fff;
+              font-size: 16px;
+              line-height: 20px;
+              -webkit-font-smoothing: antialiased;
+              text-align: center;
+              background: transparent;
+              border: 0;
+              border-bottom: 2px solid #3160B6;
+              cursor: pointer;
+              transition: all 0.15s ease;
+              font-family: Segoe UI;
+              float: right;
+        }
+
+        .button:focus {
+            border: #0066FF 1px solid;
+            box-shadow: rgba(0,102,255,0.70) 0px 0px 10px;
+        }
+        /* Button modifiers */
+
+        .buttonBlue {
+            background: #4a89dc;
+            text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
+        }
+
+        .buttonBlue:hover {
+            background: #357bd8;
+        }
+        /* Ripples container */
+
+        .ripples {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .textfield {
+            padding: 10px;
+            margin: 10px 0;
+            font-family: Segoe UI;
+            border-radius: 3px;
+            outline: none;
+            border: 1px solid #aaa;
+            width: 100%;
+            transition: all .2s;
+        }
+
+        .textfield:focus {
+            border: #0066FF;
+            box-shadow: #0066FF 0px 0px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="center">
+        <h1>Probably the best damn form anyone has ever created.</h1>
+        <br><br>
+        <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post"> <!-- Thymeleaf integration -->
+            <p>Email:</p>
+            <input class="textfield" name="email" type="text" th:field="*{id}" value="">
+            <p>Password:</p>
+            <input class="textfield" name="pass" type="password" th:field="*{password}" value="">
+            <br>
+            <div id="buttonContainer">
+                <input class="button buttonBlue" type="submit" value="Submit" /> <!-- Submits data through a post request -->
+                <input class="button buttonBlue" type="reset" value="Reset" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
