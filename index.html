@@ -26,131 +26,156 @@
 
 <body>
 
-<div id="landing">
-    <!-- Div to hold the Hero Image -->
-    <div id="bg"></div>
+    <div id="landing">
+        <!-- Div to hold the Hero Image -->
+        <div id="bg"></div>
 
-    <!-- The shadow menu that will drop down when scrolling down -->
-    <div id="staticMenu"> <!-- Hidden class hides the menu initially -->
-        <ul id="menuList" class="hidden">
-            <!-- Unordered list of the menu items -->
-            <div id="hamburgerButton" class="staticMenuItem">
-                <!-- Hamburger button. Only shown in the mobile view -->
-                <i class="menuicon fa fa-bars" aria-hidden="true"></i>
-                <!-- Icon tag. Font Awesome needs to be imported to use this -->
+        <!-- The shadow menu that will drop down when scrolling down -->
+        <div id="staticMenu">
+            <!-- Hidden class hides the menu initially -->
+            <ul id="menuList" class="hidden">
+                <!-- Unordered list of the menu items -->
+                <div id="hamburgerButton" class="staticMenuItem">
+                    <!-- Hamburger button. Only shown in the mobile view -->
+                    <i class="menuicon fa fa-bars" aria-hidden="true"></i>
+                    <!-- Icon tag. Font Awesome needs to be imported to use this -->
+                </div>
+
+                <a href="#members">
+                    <!-- href points to a div in the website for the browser to scroll down to -->
+                    <li class="staticMenuItem">Members</li>
+                    <!-- The actual menu item itself -->
+                </a>
+
+                <a href="/projects.html">
+                    <li class="staticMenuItem">Projects</li>
+                </a>
+
+                <a href="/contact.html">
+                    <li class="staticMenuItem">Contact Us</li>
+                </a>
+        </div>
+
+        <!-- Social media links -->
+        <div id="socialLinks" style="display:none">
+            <ul>
+                <!-- Unordered list structure -->
+                <a href="https://facebook.com">
+                    <!-- Always wrap the link around the list item -->
+                    <li>Facebook</li>
+                </a>
+                <a href="https://twitter.com">
+                    <li>Twitter</li>
+                </a>
+                <a href="https://plus.google.com">
+                    <li>Google+</li>
+                </a>
+                <a href="https://myspace.com">
+                    <li>Mypsace (still alive)</li>
+                </a>
+            </ul>
+        </div>
+
+        <!-- Basic structure for the navigation menu -->
+        <div id="topMenu">
+            <!-- Container for the actual menu. -->
+
+            <ul id="topMenuList">
+                <!-- This menu is located at the top of the landing -->
+                <!-- Unordered list of the menu items -->
+                <a href="#members">
+                    <!-- href points to a div in the website for the browser to scroll down to -->
+                    <li class="headitem">Members</li>
+                    <!-- The actual menu item itself -->
+                </a>
+
+                <a href="/projects.html">
+                    <li>Projects</li>
+                </a>
+
+                <a href="/contact.html">
+                    <li>Contact Us</li>
+                </a>
+            </ul>
+        </div>
+
+
+        <!-- Landing content should go here -->
+        <div id="brand" class="section">
+            <h1><span class="red">SBU</span> Web<br>and App Club</h1>
+            <div class="divider top"></div>
+            <h2>The best damn club in the world.</h2>
+        </div>
+
+    </div>
+
+    <!-- The first section of the website -->
+    <div id="about" class="section">
+        <div class="content">
+            <h3>About Website</h3>
+            <div class="divider"></div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+
+    <!-- Members -->
+    <div id="members" class="section">
+        <div class="content">
+            <h3>Members</h3>
+            <div class="divider"></div>
+            <div class="members">
+              <div class="polaroid">
+                <img src="http://www.w3schools.com/css/rock600x400.jpg" alt="Norway">
+                <div class="container">
+                  <p>The Troll's tongue in Hardanger, Norway</p>
+                </div>
+              </div>
+
+              <div class="polaroid">
+                <img src="http://www.w3schools.com/css/rock600x400.jpg" alt="Norway">
+                <div class="container">
+                  <p>The Troll's tongue in Hardanger, Norway</p>
+                </div>
+              </div>
             </div>
-
-            <a href="#members">
-                <!-- href points to a div in the website for the browser to scroll down to -->
-                <li class="staticMenuItem">Members</li>
-                <!-- The actual menu item itself -->
-            </a>
-
-            <a href="/projects.html">
-                <li class="staticMenuItem">Projects</li>
-            </a>
-
-            <a href="/contact.html">
-                <li class="staticMenuItem">Contact Us</li>
-            </a>
+        </div>
     </div>
 
-    <!-- Social media links -->
-    <div id="socialLinks" style="display:none">
-        <ul>
-            <!-- Unordered list structure -->
-            <a href="https://facebook.com">
-                <!-- Always wrap the link around the list item -->
-                <li>Facebook</li>
-            </a>
-            <a href="https://twitter.com">
-                <li>Twitter</li>
-            </a>
-            <a href="https://plus.google.com">
-                <li>Google+</li>
-            </a>
-            <a href="https://myspace.com">
-                <li>Mypsace (still alive)</li>
-            </a>
-        </ul>
-    </div>
-
-    <!-- Basic structure for the navigation menu -->
-    <div id="topMenu">
-        <!-- Container for the actual menu. -->
-
-        <ul id="topMenuList" > <!-- This menu is located at the top of the landing -->
-            <!-- Unordered list of the menu items -->
-            <a href="#members">
-                <!-- href points to a div in the website for the browser to scroll down to -->
-                <li class="headitem">Members</li>
-                <!-- The actual menu item itself -->
-            </a>
-
-            <a href="/projects.html">
-                <li>Projects</li>
-            </a>
-
-            <a href="/contact.html">
-                <li>Contact Us</li>
-            </a>
-        </ul>
-    </div>
-
-
-    <!-- Landing content should go here -->
-    <div id="brand" class="section">
-        <h1><span class="red">SBU</span> Web<br>and App Club</h1>
-        <div class="divider top"></div>
-        <h2>The best damn club in the world.</h2>
-    </div>
-
-</div>
-
-<!-- The first section of the website -->
-<div id="about" class="section">
-  <div class="content">
-    <h3>About Website</h3>
-    <div class="divider"></div>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-  </div>
-</div>
-
-<!-- Some other section. -->
-<div id="projects" class="section">
-  <div class="content">
-  <h3>Projects</h3>
-  <div class="divider"></div>
-  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-</p>
-  <div class="projects">
-      <article>
-        <a href="#" class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/24078/screenshots/3104291/b_white.jpg" alt=""></a>
-      <h4 class="major">Sed feugiat lorem</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-      <a href="#"><button class="btn btnwhite">Learn more</button></a>
-      </article>
-      <article>
-        <a href="#" class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/3104971/web-sales-platform-design-ramotion.png" alt=""></a>
-      <h4 class="major">Sed feugiat lorem</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-      <a href="#"><button class="btn btnwhite">Learn more</button></a>
-      </article>
-      <article>
-        <a href="#" class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/642843/screenshots/3104623/lylat_dribbble.jpg" alt=""></a>
-      <h4 class="major">Sed feugiat lorem</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-      <a href="#"><button class="btn btnwhite">Learn more</button></a>
-      </article>
-      <article>
-        <a href="#" class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/371094/screenshots/3104627/preacher_1x.png" alt=""></a>
-      <h4 class="major">Sed feugiat lorem</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-      <a href="#"><button class="btn btnwhite">Learn more</button></a>
-      </article>
-  </div>
-  <div class="content">
-</div>
+    <!-- Projects. -->
+    <div id="projects" class="section">
+        <div class="content">
+            <h3>Projects</h3>
+            <div class="divider"></div>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </p>
+            <div class="projects">
+                <article>
+                    <a href="#" class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/24078/screenshots/3104291/b_white.jpg" alt=""></a>
+                    <h4 class="major">Sed feugiat lorem</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                    <a href="#"><button class="btn btnwhite">Learn more</button></a>
+                </article>
+                <article>
+                    <a href="#" class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/3104971/web-sales-platform-design-ramotion.png" alt=""></a>
+                    <h4 class="major">Sed feugiat lorem</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                    <a href="#"><button class="btn btnwhite">Learn more</button></a>
+                </article>
+                <article>
+                    <a href="#" class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/642843/screenshots/3104623/lylat_dribbble.jpg" alt=""></a>
+                    <h4 class="major">Sed feugiat lorem</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                    <a href="#"><button class="btn btnwhite">Learn more</button></a>
+                </article>
+                <article>
+                    <a href="#" class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/371094/screenshots/3104627/preacher_1x.png" alt=""></a>
+                    <h4 class="major">Sed feugiat lorem</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                    <a href="#"><button class="btn btnwhite">Learn more</button></a>
+                </article>
+            </div>
+            <div class="content">
+            </div>
 </body>
 
 <footer>
