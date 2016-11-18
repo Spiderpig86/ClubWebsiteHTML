@@ -10,6 +10,12 @@
     box-sizing: border-box;
 }
 
+*:before, *:after { /* For pseudo elements */
+  -webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
 body {
     color: #222222;
     text-rendering: optimizeLegibility;
@@ -244,7 +250,7 @@ article .image img {
 
 article h4 {
   padding-bottom: 1em;
-border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+    border-bottom: solid 2px rgb(229, 119, 138);
 }
 
 .btn {
@@ -268,6 +274,7 @@ border-bottom: solid 2px rgba(255, 255, 255, 0.125);
   overflow: hidden;
   border: 3px solid #fff;
     color: #fff;
+        z-index: 2;
 }
 
 .btn:after {
@@ -277,9 +284,21 @@ z-index: -1;
 -webkit-transition: all 0.3s;
 -moz-transition: all 0.3s;
 transition: all 0.3s;
-    width: 0%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #fff;
+}
+
+.btnWhite:after {
+  width: 0%;
+height: 100%;
+top: 0;
+left: 0;
+background: #fff;
+}
+
+.btnWhite:hover {
+  color: #ec0d34;
+}
+
+.btnWhite:hover:after,
+.btnWhite:active:after {
+  width: 100%; /* Makes the pseudo element fill up the space of the button */
 }
