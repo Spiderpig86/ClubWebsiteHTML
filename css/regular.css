@@ -63,6 +63,12 @@ padding: 10px 0;
 font-family: 'Montserrat';
 }
 
+h5 {
+  font-size: 30px;
+margin: 10px 0px;
+color: #fff;
+}
+
 .divider {
 border-bottom: 3px solid #f75a70;
 height: 30px;
@@ -80,7 +86,16 @@ height: 30px;
 .content {
   padding: 3em 0 1em 0;
 margin: 0 auto;
-width: 55em;
+max-width: 55em;
+}
+
+.section {
+  padding: 50px;
+}
+
+.dark {
+  color: #222;
+  text-shadow: none;
 }
 
 
@@ -188,7 +203,6 @@ transition: all .3s;
 /* ABOUT */
 
 #about {
-    padding: 50px;
     background-color: #ee1c4d;
     background-image: url("../img/poly.png");
     background-position: 50% 50%;
@@ -204,6 +218,10 @@ transition: all .3s;
 
 /* MEMBERS */
 
+#members {
+    background: #fff;
+}
+
 .members {
   display: -moz-flex;
 display: -webkit-flex;
@@ -217,8 +235,23 @@ margin: 0 0 2em 0;
     vertical-align: baseline;
 }
 
+#members p {
+  margin: 10px 0;
+}
+
+#membersBg {
+  background: url("../img/code.jpeg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: .9;
+  z-index: -2;
+  backface-visibility: hidden;
+}
+
 .polaroid {
-  background-color: white;
+  background-color: #df3452;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 margin-bottom: 25px;
 -webkit-flex: 1;
@@ -231,10 +264,16 @@ width: calc(50% - 1.5em);
 text-align: center;
 }
 
-.polaroid img {
+.polaroid .avatar {
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+    height: 150px;
+    margin: 30px;
+}
+
+.polaroid p {
+  color: #ccc;
+  margin: 10px 0;
 }
 
 .container {
@@ -303,7 +342,7 @@ article h4 {
 	cursor: pointer;
 	padding: 25px 80px;
 	display: inline-block;
-	margin: 15px 30px;
+	margin: 15px auto;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
@@ -316,6 +355,7 @@ article h4 {
   border: 3px solid #fff;
     color: #fff;
         z-index: 2;
+        width: 100%;
 }
 
 .btn:after {
