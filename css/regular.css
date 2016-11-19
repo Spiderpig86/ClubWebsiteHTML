@@ -236,7 +236,11 @@ margin: 0 0 2em 0;
 }
 
 #members p {
-  margin: 10px 0;
+  margin: 50px 0;
+}
+
+.members .container p {
+  margin: 10px 0 !important;
 }
 
 #membersBg {
@@ -262,18 +266,36 @@ border-radius: 5px;
 margin: 1.5em 3em 1.5em 0;
 width: calc(50% - 1.5em);
 text-align: center;
+transition: all .3s;
+}
+
+.polaroid:hover {
+      box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 35px 0 rgba(0, 0, 0, 0.19);
 }
 
 .polaroid .avatar {
   border-radius: 50%;
-  width: 150px;
-    height: 150px;
-    margin: 30px;
+width: 150px;
+height: 150px;
+margin: 30px;
+margin-top: calc(-50% + 4em);
+position: relative;
 }
 
 .polaroid p {
   color: #ccc;
   margin: 10px 0;
+}
+
+.polaroidBg {
+  overflow: hidden;
+border-radius: 5px 5px 0 0;
+display: block;
+margin-bottom: 1.75em;
+margin-left: -1.75em;
+margin-top: -1.75em;
+position: relative;
+width: calc(100% + 3.5em);
 }
 
 .container {
