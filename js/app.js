@@ -20,5 +20,4 @@ $(window).scroll(function() {
   } else {
     $('ul#menuList').removeClass('hidden');
   }
-    console.log($(window).scrollTop() + " " + $("#landing").height());
 });
