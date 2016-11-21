@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>SBUWAC</title>
+    <title>SBUWADC</title>
 
     <!-- Some META stuff -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -16,12 +16,13 @@
     <!-- Different font families are separated by the '|' character -->
 
     <!-- JS (if async) -->
-    <script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> <!-- JQuery CDN -->
     <!-- Put jQuery first so other frameworks will work correctly. Don't use async. -->
 
     <script async src="js/app.js"></script>
     <script async src="js/smoothscroll.js"></script>
     <script src="https://use.fontawesome.com/a696b91557.js"></script>
+    <!--<script async src="js/colortransition.js"></script>-->
     <!-- Use font Awesome for the Hamburger Menu Icon -->
 
 </head>
@@ -89,17 +90,21 @@
             <ul id="topMenuList">
                 <!-- This menu is located at the top of the landing -->
                 <!-- Unordered list of the menu items -->
-                <a href="#members">
+                <a class="smoothScroll" href="#about">
                     <!-- href points to a div in the website for the browser to scroll down to -->
-                    <li class="headitem">Members</li>
+                    <li class="headitem">About</li>
                     <!-- The actual menu item itself -->
                 </a>
 
-                <a href="/projects.html">
+                <a href="#members">
+                    <li>Memebers</li>
+                </a>
+
+                <a href="#projects">
                     <li>Projects</li>
                 </a>
 
-                <a href="/contact.html">
+                <a class="smoothScroll" href="#join">
                     <li>Contact Us</li>
                 </a>
             </ul>
@@ -108,7 +113,7 @@
 
         <!-- Landing content should go here -->
         <div id="brand">
-            <h1><span class="red">SBU</span> Web<br>and App Club</h1>
+            <h1><span class="red">SBU</span> Web<br>and App Development Club</h1>
             <div class="divider top"></div>
             <h2>The best damn club in the world.</h2>
         </div>
@@ -277,25 +282,40 @@
       <div id="details">
           <div id="location" class="details">
               <h5>Location</h5>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.1502723742174!2d-73.12467068450844!3d40.91245087931065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e83f31d26cce65%3A0x2165176f83301182!2sOld+Computer+Science!5e0!3m2!1sen!2sus!4v1479690337991"; frameborder="0" style="border:0;width: 100%; height: 30%" allowfullscreen></iframe>
           </div>
 
           <div id="times" class="details">
                 <h5>Times</h5>
+                <p style="font-weight: bold;">Wednesdays</p>
+                <p>1:00pm - 2:00pm</p>
+                <p style="font-weight: bold;">Fridays</p>
+                <p>2:30pm - 3:20pm</p>
           </div>
 
           <div id="contact" class="details">
-                <h5>Contact</h5>
+                <h5>Connect</h5>
+      <p><a href="mailto:">Club Email</a></p>
+      <p><a href="#:">Facebook Group</a></p>
+      <p><a href="#:">Slack Team</a></p>
           </div>
       </div>
 
-      <a href="#"><button class="btn btnwhite">Join Us</button></a>
+      <a href="#"><button class="btn btnwhite" style="margin-top: 50px;">Join Us</button></a>
 </div>
 
 </div>
 </body>
 
 <footer>
-    <!-- Contact info should go here. -->
+    <div id="footer">
+      <h2>SBUWADC</h2>
+      <p>Building something you love.</p>
+    <p>
+      <span>
+    Made with <i class="fa fa-heart pulse"></i> in <a href="https://www.google.com/maps/place/Stony+Brook+University/@40.9123761,-73.1255829,17z/data=!3m1!4b1!4m5!3m4!1s0x89e83f33e67438bf:0x734c1ca56abdcc85!8m2!3d40.9123761!4d-73.1233889?hl=en" target="_blank">Stony Brook</a>
+</span></p>
+    </div>
 </footer>
 
 </html>

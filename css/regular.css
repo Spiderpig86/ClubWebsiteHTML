@@ -8,6 +8,8 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
 }
 
 *:before, *:after { /* For pseudo elements */
@@ -17,11 +19,8 @@ box-sizing: border-box;
 }
 
 body {
-    color: #222222;
-    text-rendering: optimizeLegibility;
     font-family: Hind Siliguri;
     background: #222;
-        -webkit-font-smoothing: antialiased;
 
 }
 
@@ -29,7 +28,7 @@ h1 {
     font-family: 'Montserrat';
     text-transform: uppercase;
     bottom: 80px;
-    font-size: 78px;
+    font-size: 68px;
     color: #fff;
     padding: 10px 0;
         text-shadow: 2px 2px 3px rgba(45, 45, 45, 0.21);
@@ -97,6 +96,16 @@ max-width: 55em;
 .dark {
   color: #222;
   text-shadow: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: all .3s;
+}
+
+a:hover {
+  color: #ff4e6d;
 }
 
 
@@ -255,7 +264,7 @@ margin-bottom: 25px;
 padding: 1.75em 1.75em 0.1em 1.75em;
 border-radius: 5px;
     margin: 1.5em;
-width: calc(50% - 1.5em);
+/*width: calc(50% - 1.5em);*/
 text-align: center;
 transition: all .3s;
 }
@@ -456,27 +465,26 @@ article h4 {
 
 .btn {
   border: none;
-	font-family: inherit;
-	font-size: inherit;
-	color: inherit;
-	background: none;
-	cursor: pointer;
-	padding: 25px 80px;
-	display: inline-block;
-	margin: 15px auto;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-	outline: none;
-	position: relative;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 20px 80px;
+  display: block;
+  margin: 15px auto;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
   overflow: hidden;
   border: 3px solid #fff;
-    color: #fff;
-        z-index: 2;
-        width: 100%;
+  color: #fff;
+  z-index: 2;
 }
 
 .btn:after {
@@ -522,7 +530,7 @@ top: 0;
 bottom: 0;
 width: 100%;
 height: 100%;
-background: #54000f;
+background: #000; /*54000f*/
 opacity: 0.8;
 }
 
@@ -539,10 +547,83 @@ position: relative;
 
 #details {
   margin: 0;
+  display: flex;
 }
 
 .details {
   display: inline-block;
-  width: 33.33%; /* as @passatgt mentioned in the comment, for the older browsers fallback */
-  width: calc(100% / 3);
+      flex-basis: 33.33334%;
+    padding: 40px;
+          border-left: 2px solid #fff;
+        text-align: center;
+}
+
+.details:first-child {
+  border-left: none;
+}
+
+
+
+/* FOOTER */
+
+#footer
+{
+  width: 100%;
+    padding: 30px 0;
+    margin: 0px;
+    position: relative;
+    background: #111;
+}
+
+footer h2 {
+  text-align: center;
+letter-spacing: 6px;
+width: 100%;
+position: relative;
+padding-bottom: 10px;
+}
+
+footer p {
+  color: #aaa;
+    text-align: center;
+    position: relative;
+}
+
+footer span {
+  color: #8c8c8c;
+  font-size: 12px;
+  display: block;
+  position: relative;
+  width: 90%;
+  left: 50%;
+  top: 45%;
+  bottom: 0;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer span a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer span .fa {
+  color: #E90606;
+  margin: 0 3px;
+  font-size: 10px;
+  animation: pound 0.35s infinite alternate;
+  -webkit-animation: pound 0.35s infinite alternate;
+}
+
+@-webkit-keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
 }
