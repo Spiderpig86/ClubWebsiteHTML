@@ -10,6 +10,7 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
 text-rendering: optimizeLegibility;
+    transition: all .3s;
 }
 
 *:before, *:after { /* For pseudo elements */
