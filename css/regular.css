@@ -258,9 +258,9 @@ margin: 0 0 2em 0;
   /*df3452*/
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 margin-bottom: 25px;
--webkit-flex: .333;
-   -ms-flex: .333;
-   flex: .333; /*  Needed so the elements actually wrap */
+-webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 1; /*  Needed so the elements actually wrap */
 padding: 1.75em 1.75em 0.1em 1.75em;
 border-radius: 5px;
     margin: 1.5em;
@@ -438,7 +438,7 @@ margin: 0 0 2em 0;
 background-color: #ec0d34;
 border-radius: 5px;
     margin: 1.5em;
-width: calc(50% - 1.5em);
+/*width: calc(50% - 1.5em);*/
 -webkit-flex: 1;
    -ms-flex: 1;
    flex: 1; /*  Needed so the elements actually wrap */
@@ -513,6 +513,107 @@ background: #fff;
   width: 100%; /* Makes the pseudo element fill up the space of the button */
 }
 
+.btn-more {
+  position: relative;
+  color: #fff;
+}
+.btn-more:before, .btn-more:after {
+  position: absolute;
+  top: 50%;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: -1;
+}
+.btn-more:before {
+  left: -20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.btn-more:after {
+  right: -20px;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+.btn-more:hover {
+  color: #ec0d34;
+}
+.btn-more:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+          animation: criss-cross-left 0.8s both;
+}
+.btn-more:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+          animation: criss-cross-right 0.8s both;
+}
+
+/* Button Animation */
+
+@-webkit-keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+@-webkit-keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+@keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+
 /* JOIN */
 #join {
   background: url("https://dcrazed.com/html/space-agency-demo/img/call-to-action-bg.jpg");
@@ -548,6 +649,7 @@ position: relative;
 #details {
   margin: 0;
   display: flex;
+  padding: 50px 0;
 }
 
 .details {
@@ -562,7 +664,47 @@ position: relative;
   border-left: none;
 }
 
-
+.btn-join {
+  color: #fff;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.btn-join:after {
+  content: '';
+  width: 0;
+  height: 0;
+  -webkit-transform: rotate(360deg);
+  border-style: solid;
+  border-width: 0 0 0 0;
+  border-color: transparent #fff transparent transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.btn-join:before {
+  content: '';
+  width: 0;
+  height: 0;
+  -webkit-transform: rotate(360deg);
+  border-style: solid;
+  border-width: 0 0 0 0;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+.btn-join:hover {
+  color: #ec0d34;
+}
+.btn-join:hover:before, .btn-join:hover:after {
+  border-width: 80px 275.5px;
+  z-index: -1;
+}
+.btn-join:active {
+  background: #12122e;
+}
 
 /* FOOTER */
 

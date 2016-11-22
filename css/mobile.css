@@ -1,0 +1,45 @@
+/* CSS styling for mobile */
+
+@media screen and (max-width: 768px) { /* Define max width for this style to be used. This supports up to most tablets and phones. */
+  /* GLOBAL PROPERTIES */
+
+  h1 {
+      font-size: 38px;
+  }
+
+  .top {
+    width: 180px;
+    border-bottom: 3px solid #ec0d34;
+    bottom: 90px;
+    margin: 0 20px;
+  }
+
+  /* LANDING */
+  #bg {
+        background-position: center center;
+  }
+
+  #landing h1, h2 {
+      position: absolute;
+      padding: 20px;
+  }
+
+  #topMenu li {
+    padding: 10px 15px;
+    transition: all .3s;
+    list-style: none;
+    font-size: 11px;
+    display: block;
+  }
+
+  /* PROJECTS */
+  .projects article {
+    padding: 1.75em 1.75em 0.1em 1.75em;
+    background-color: #ec0d34;
+    margin: 1.5em 0;
+    border-radius: 5px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+}
