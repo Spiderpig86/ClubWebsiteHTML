@@ -1,6 +1,6 @@
 /* CSS styling for mobile */
 
-@media screen and (max-width: 768px) { /* Define max width for this style to be used. This supports up to most tablets and phones. */
+@media screen and (max-width: 690px) { /* Define max width for this style to be used. This supports up to most tablets and phones. */
   /* GLOBAL PROPERTIES */
 
   h1 {
@@ -32,6 +32,13 @@
     display: block;
   }
 
+  /* MEMBERS */
+  .polaroid {
+    -webkit-flex: 1;
+       -ms-flex: 1;
+       flex: 1; /*  Needed so the elements actually wrap */
+  }
+
   /* PROJECTS */
   .projects article {
     padding: 1.75em 1.75em 0.1em 1.75em;
@@ -41,5 +48,14 @@
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+  }
+
+  /* JOIN US */
+  #details {
+      display: inherit; /* Makes block sizes larger for mobile devices. */
+  }
+
+  .details:last-child {
+    border-bottom: none;
 }
 }

@@ -259,9 +259,9 @@ margin: 0 0 2em 0;
   /*df3452*/
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 margin-bottom: 25px;
--webkit-flex: 1;
-   -ms-flex: 1;
-   flex: 1; /*  Needed so the elements actually wrap */
+-webkit-flex: .333;
+   -ms-flex: .333;
+   flex: .333; /*  Needed so the elements actually wrap */
 padding: 1.75em 1.75em 0.1em 1.75em;
 border-radius: 5px;
     margin: 1.5em;
