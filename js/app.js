@@ -1,4 +1,5 @@
 // JS File for the website
+var mobileMenuShown = true;
 
 if ($("#bg").height() > 650) {
   // Function to make the landing div the same height as the window using jQuery
@@ -13,7 +14,10 @@ if ($("#bg").height() > 650) {
           'height' : $("#bg").height()
       })
     }
-    console.log($("#bg").height());
+    // Hides the mobile menu if the width is greater than 768px.
+    if ($("#bg").width() > 768) {
+      updateMobileMenu(false);
+    }
   })
 
 
@@ -27,3 +31,13 @@ $(window).scroll(function() {
     $('ul#menuList').removeClass('hidden');
   }
 });
+
+// Shows/Hides the hamburger button in the menu based on the screen width.
+function updateMobileMenu(show) {
+    mobileMenuShown = show;
+    if (show) { // Show the menu
+
+    } else {  // Hide the menu
+
+    }
+}
