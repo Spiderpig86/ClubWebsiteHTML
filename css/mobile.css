@@ -1,6 +1,6 @@
 /* CSS styling for mobile */
 
-@media screen and (max-width: 690px) { /* Define max width for this style to be used. This supports up to most tablets and phones. */
+@media screen and (max-width: 640px) { /* Define max width for this style to be used. This supports up to most tablets and phones. */
   /* GLOBAL PROPERTIES */
 
   h1 {
@@ -32,6 +32,38 @@
     display: block;
   }
 
+  .staticMenuItem {
+    display: none;
+  }
+
+  #hamburgerbutton {
+    display: inline-block;
+transition: all .3s;
+width: 100%;
+height:60px;
+  }
+
+  #menuList {
+    padding: 0;
+        height: 60px;
+  }
+
+  #mobileMenu {
+    /*display: none;
+ opacity: 0;*/
+ height: 0px;
+ position: fixed;
+ top: 60px;
+ width: 100%;
+ z-index: 999;
+ background: rgba(255, 255, 255, 0.95);
+ transition: all .3s;
+  }
+
+  .mobileMenuItem {
+    text-align: center;
+  }
+
   /* MEMBERS */
   .polaroid {
     -webkit-flex: 1;
@@ -52,9 +84,14 @@
 
   /* JOIN US */
   #details {
-      display: inherit; /* Makes block sizes larger for mobile devices. */
+      display: block; /* Makes block sizes larger for mobile devices. */
   }
 
+.details {
+  border-bottom: 1px #fff solid;
+  border-left: none;
+      width: 100%;
+}
   .details:last-child {
     border-bottom: none;
 }

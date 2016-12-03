@@ -38,10 +38,11 @@
             <!-- Hidden class hides the menu initially -->
             <ul id="menuList" class="hidden">
                 <!-- Unordered list of the menu items -->
-                <div id="hamburgerButton" class="staticMenuItem">
+                <div id="hamburgerButton" class="menu">
                     <!-- Hamburger button. Only shown in the mobile view -->
-                    <i class="menuicon fa fa-bars" aria-hidden="true"></i>
+                    <!--<i class="menuicon fa fa-bars" aria-hidden="true"></i>-->
                     <!-- Icon tag. Font Awesome needs to be imported to use this -->
+                    <span></span>
                 </div>
 
                 <a class="smoothScroll" href="#about">
@@ -61,7 +62,29 @@
                 <a class="smoothScroll" href="#join">
                     <li class="staticMenuItem">Join</li>
                 </a>
+
+                <a class="smoothScroll" href="#join">
+                    <li class="staticMenuItem signin"><i class="fa fa-sign-in" aria-hidden="true"></i>     Sign In</li>
+                </a>
         </div>
+
+<!-- DROP DOWN MOBILE MENU -->
+        <div id="dropDownMenuContainer">
+       <div id="dropDownMenuCenter" class="center">
+       <ul id="dropDownMenu">
+        <a class="smoothScroll" href="#about">
+                   <li class="mobileMenuItem" onclick="updateMobileMenu(true);">About</li>
+               </a>
+                 <a class="smoothScroll" href="#members" onclick="updateMobileMenu(true);">
+                     <li class="mobileMenuItem">Members</li></a>
+                 <a class="smoothScroll" href="#projects" onclick="updateMobileMenu(true);">
+                     <li class="mobileMenuItem">Projects</li></a>
+               <a class="smoothScroll" href="#join" onclick="updateMobileMenu(true);">
+                   <li class="mobileMenuItem">Join Us</li>
+               </a>
+       </ul>
+     </div>
+   </div>
 
         <!-- Social media links -->
         <div id="socialLinks" style="display:none">
@@ -105,7 +128,7 @@
                 </a>
 
                 <a class="smoothScroll" href="#join">
-                    <li>Contact Us</li>
+                    <li>Join Us</li>
                 </a>
             </ul>
         </div>
@@ -300,9 +323,9 @@
           <div id="contact" class="details">
                 <h5>Connect</h5>
                 <!-- Add font awesome for each social network service -->
-      <p><a href="mailto:">Club Email</a></p>
-      <p><a href="#:">Facebook Group</a></p>
-      <p><a href="#:">Slack Team</a></p>
+      <p><a href="mailto:"><i style="padding-right: 10px;" class="fa fa-envelope" aria-hidden="true"></i>Club Email</a></p>
+      <p><a href="#:"><i style="padding-right: 10px;" class="fa fa-facebook-official" aria-hidden="true"></i>Facebook Group</a></p>
+      <p><a href="#:"><i style="padding-right: 10px;" class="fa fa-slack" aria-hidden="true"></i>Slack Team</a></p>
           </div>
       </div>
 
