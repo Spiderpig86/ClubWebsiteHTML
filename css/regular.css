@@ -144,12 +144,11 @@ a:hover {
   }
 
   #landing h1, h2 {
-      position: inherit !important;
-      position: inherit;
+      /*position: inherit !important;*/
   }
 
   .top {
-    position: inherit;
+    /*position: inherit;*/
 }
 
 }
@@ -165,7 +164,7 @@ a:hover {
 
 #landing h1, h2 {
     /*position: absolute;*/
-    padding: 50px;
+    padding: 30px 50px;
     font-weight: 200;
 }
 
@@ -193,9 +192,9 @@ text-transform: uppercase;
 }
 
 #topMenu li {
-    display: inline;
+  display: inline-block;
 padding: 15px 25px;
-    margin: 0 10px;
+margin: 0 10px;
 transition: all .3s;
 }
 
@@ -555,7 +554,7 @@ transition: all .3s;
 /* PROJECTS */
 
 #projects p {
-    color: #cbcbcb;
+    color: #fff;
     line-height: 28px;
     margin: 3em 0em;
 }
