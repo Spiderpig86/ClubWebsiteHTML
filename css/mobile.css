@@ -20,7 +20,6 @@
   }
 
   #landing h1, h2 {
-      position: absolute;
       padding: 20px;
   }
 
@@ -64,13 +63,6 @@ height:60px;
     text-align: center;
   }
 
-  /* MEMBERS */
-  .polaroid {
-    -webkit-flex: 1;
-       -ms-flex: 1;
-       flex: 1; /*  Needed so the elements actually wrap */
-  }
-
   /* PROJECTS */
   .projects article {
     padding: 1.75em 1.75em 0.1em 1.75em;
@@ -95,4 +87,20 @@ height:60px;
   .details:last-child {
     border-bottom: none;
 }
+
+/* MOUSE SCROLL EFFECT */
+.scroll-btn .mouse {
+  width: 20px;
+height: 35px;
+}
+}
+
+@media screen and (max-width: 620px) { /* Weird FlexBox issue with the max-width set at 640px */
+  /* MEMBERS */
+  .polaroid {
+    -webkit-flex: 1;
+       -ms-flex: 1;
+       flex: 1; /*  Needed so the elements actually wrap */
+           width: calc(50% - 1.5em);
+  }
 }

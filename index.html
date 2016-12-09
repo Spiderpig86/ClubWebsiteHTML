@@ -59,6 +59,10 @@
                     <li class="staticMenuItem">Projects</li>
                 </a>
 
+                <a class="smoothScroll" href="#ideas">
+                    <li class="staticMenuItem">Ideas</li>
+                </a>
+
                 <a class="smoothScroll" href="#join">
                     <li class="staticMenuItem">Join</li>
                 </a>
@@ -79,6 +83,8 @@
                      <li class="mobileMenuItem">Members</li></a>
                  <a class="smoothScroll" href="#projects" onclick="updateMobileMenu(true);">
                      <li class="mobileMenuItem">Projects</li></a>
+                     <a class="smoothScroll" href="#ideas" onclick="updateMobileMenu(true);">
+                         <li class="mobileMenuItem">Ideas</li></a>
                <a class="smoothScroll" href="#join" onclick="updateMobileMenu(true);">
                    <li class="mobileMenuItem">Join Us</li>
                </a>
@@ -119,12 +125,16 @@
                     <!-- The actual menu item itself -->
                 </a>
 
-                <a href="#members">
+                <a class="smoothScroll" href="#members">
                     <li>Memebers</li>
                 </a>
 
-                <a href="#projects">
+                <a class="smoothScroll" href="#projects">
                     <li>Projects</li>
+                </a>
+
+                <a class="smoothScroll" href="#ideas">
+                    <li>Ideas</li>
                 </a>
 
                 <a class="smoothScroll" href="#join">
@@ -136,10 +146,20 @@
 
         <!-- Landing content should go here -->
         <div id="brand">
-            <h1><span class="red">SBU</span> Web<br>and App Development Club</h1>
+            <h1><span class="red"><</span>SBUWADC<span class="red">></span></h1>
             <div class="divider top"></div>
-            <h2>The best damn club in the world.</h2>
+            <h2>Build something you love.</h2>
         </div>
+
+        <!-- Scroll down mouse effect -->
+<span class="scroll-btn">
+        <a href="#">
+		<span class="mouse">
+			<span>
+			</span>
+		</span>
+	</a>
+</span>
 
     </div>
 
@@ -300,6 +320,15 @@
           </div>
         </div>
 
+<!-- Ideas -->
+<div id="ideas" class="section">
+<div class="content">
+    <h3 style="text-align: center;">Submit Your Idea</h3>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+  </div>
+</div>
+
 <!-- Join -->
 <div id="join" class="section">
 
@@ -338,7 +367,7 @@
 <footer>
     <div id="footer">
       <h2>SBUWADC</h2>
-      <p>Building something you love.</p>
+      <p>Build something you love.</p>
     <p>
       <span>
     Made with <i class="fa fa-heart pulse"></i> in <a href="https://www.google.com/maps/place/Stony+Brook+University/@40.9123761,-73.1255829,17z/data=!3m1!4b1!4m5!3m4!1s0x89e83f33e67438bf:0x734c1ca56abdcc85!8m2!3d40.9123761!4d-73.1233889?hl=en" target="_blank">Stony Brook</a>
