@@ -136,6 +136,12 @@ a:hover {
     opacity: .5;
     z-index: -2;
     backface-visibility: hidden;
+    background-attachment: fixed;
+}
+
+  #landing h1, h2 {
+    margin: 10px 50px;
+
 }
 
 @media screen and (max-height: 650px) { /** Stop the unneeded resizing at small heights **/
@@ -143,9 +149,6 @@ a:hover {
        height: 670px;
   }
 
-  #landing h1, h2 {
-      /*position: inherit !important;*/
-  }
 
   .top {
     /*position: inherit;*/
@@ -158,14 +161,11 @@ a:hover {
   }
 }
 
-#landing {
-    margin: 0px;
-}
-
 #landing h1, h2 {
     /*position: absolute;*/
     padding: 30px 50px;
     font-weight: 200;
+        margin: 0 50px;
 }
 
 #socialLinks li  { /* Style the list items in the social nav menu */
@@ -310,6 +310,7 @@ margin: auto;
 position: relative;
 top: 50%;
 transform: translateY(50%);
+background: rgba(255,255,255,0.3);
 }
 
 #dropDownMenuContainer {
@@ -406,6 +407,7 @@ border-radius: 5px;
     margin: 1.5em;
 text-align: center;
 transition: all .3s;
+max-width: calc(50% - 1.5em);
 }
 
 .polaroid:hover {
@@ -439,6 +441,7 @@ transition: all .3s;
 .polaroid p {
   color: #ccc;
   margin: 10px 0;
+  word-wrap: break-word;
 }
 
 .polaroidbg {
@@ -624,6 +627,7 @@ article h4 {
   border: 3px solid #fff;
   color: #fff;
   z-index: 2;
+  letter-spacing: 5px;
 }
 
 .btn:after {
@@ -764,6 +768,12 @@ background: #fff;
   color: #cbcbcb;
 }
 
+.btn-ideas:hover {
+  transition: all .3s;
+  background-color: #fff;
+      color: #ec0d34;
+}
+
 
 /* JOIN */
 #join {
@@ -850,7 +860,7 @@ position: relative;
   color: #ec0d34;
 }
 .btn-join:hover:before, .btn-join:hover:after {
-  border-width: 80px 275.5px;
+  border-width: 80px 305.5px;
   z-index: -1;
 }
 .btn-join:active {

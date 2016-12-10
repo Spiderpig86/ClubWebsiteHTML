@@ -36,7 +36,7 @@ $(window).scroll(function() {
 // Shows/Hides the hamburger button in the menu based on the screen width.
 function updateMobileMenu(hide) {
     mobileMenuHidden = hide;
-    if (hide) { // Hide the menu
+    if (hide) { // Show the menu
       $("#dropDownMenuContainer").css("height", "0");
              /*$("#hamburgerButton i").removeClass("fa fa-times");
              $("#hamburgerButton i").addClass("fa fa-bars");*/
@@ -58,11 +58,4 @@ $("#hamburgerButton").click(function() {
     updateMobileMenu(!mobileMenuHidden);
 });
 
-// Hide the drop down menu when scrolling up past the landing div
-$(window).scroll(function() {
-  if ($(document).scrollTop() < $(window).height()) {
-      updateMobileMenu(true);
-  } else {
-    updateMobileMenu(false);
-  }
-});
+// Hide the drop
