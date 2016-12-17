@@ -1,0 +1,47 @@
+/** Possible accent color: #0296f5 **/
+
+*{
+  font-family: 'Nunito Sans';
+  margin: 0;
+  padding: 0;
+}
+
+.space {
+  padding: 40px;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 60px;
+}
+
+/* SPLASH */
+#splash {
+
+}
+
+#bg {
+  background-image: url("https://images.unsplash.com/photo-1473421128459-ca4900980e03?dpr=1.25&auto=compress,format&fit=crop&w=991&h=661&q=80&cs=tinysrgb&crop=");
+  background-position: center;
+background-size: cover;
+height: 300px;
+}
+
+/* CONTENT */
+#content {
+  padding: 20px;
+  box-shadow: 0px -10px 25px rgba(0, 0, 0, 0.35);
+}
+
+#details {
+  margin-left: 30px;
+}
+
+.avatar {
+  border-radius: 50%;
+width: 200px;
+margin: 2.5em;
+margin-top: -9em;
+transition: all .3s;
+position: absolute;
+}

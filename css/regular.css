@@ -22,7 +22,7 @@ box-sizing: border-box;
 body {
     font-family: Hind Siliguri;
     background: #222;
-
+overflow-x: hidden;
 }
 
 h1 {
@@ -34,11 +34,12 @@ color: #fff;
 padding: 10px 0;
 /*text-shadow: 2px 2px 3px rgba(45, 45, 45, 0.21);*/
     letter-spacing: 4px;
+    font-weight: 400;
 }
 
 h2 {
     font-family: "Montserrat";
-    font-weight: 300;
+    font-weight: 400;
     color: #fff;
     text-transform: uppercase;
     bottom: 0;
@@ -141,18 +142,6 @@ a:hover {
 
   #landing h1, h2 {
     margin: 15px 50px;
-
-}
-
-@media screen and (max-height: 650px) { /** Stop the unneeded resizing at small heights **/
-  #bg {
-       height: 670px;
-  }
-
-
-  .top {
-    /*position: inherit;*/
-}
 
 }
 
@@ -370,7 +359,7 @@ color: white;
 /* MEMBERS */
 
 #members {
-    background: #fff;
+    background: #f4f7f6;
 }
 
 .members {
@@ -770,10 +759,53 @@ background: #fff;
 
 .btn-ideas:hover {
   transition: all .3s;
-  background-color: #fff;
-      color: #ec0d34;
+      color: #fff !important;
+      border: 3px solid #fff !important;
 }
 
+.btn-ideas {
+  color: #e0cee8;
+  border: 3px solid #e0cee8;
+}
+.btn-ideas:before, .btn-ideas:after,
+.btn-ideas span:before,
+.btn-ideas span:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 63.5px;
+  height: 0;
+  background: #534c67;
+  transition: all .5s;
+}
+.btn-ideas:before {
+  left: 0;
+}
+.btn-ideas:after {
+  left: 125px;
+}
+.btn-ideas span:before, .btn-ideas span:after {
+  top: auto;
+  bottom: 0;
+}
+.btn-ideas span:before {
+  left: 62.5px;
+      z-index: -1;
+}
+.btn-ideas span:after {
+  left: 187.5px;
+}
+.btn-ideas:hover {
+  color: #d4cbce;
+}
+.btn-ideas:hover:before, .btn-ideas:hover:after,
+.btn-ideas:hover span:before,
+.btn-ideas:hover span:after {
+  height: 80px;
+}
+.btn-ideas:active {
+  background: #512d3a;
+}
 
 /* JOIN */
 #join {
@@ -881,7 +913,6 @@ position: relative;
 footer h2 {
   text-align: center;
 letter-spacing: 6px;
-width: 100%;
 position: relative;
 padding-bottom: 10px;
 }
