@@ -10,28 +10,49 @@
 <body>
   <div id="splash">
     <div id="bg">
-      <svg width="450" height="100" viewBox="0 0 450 100" style="position: absolute; top: 0;">
-        <defs>
-          <filter id="blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
-          </filter>
-        </defs>
-        <image filter="url(#blur)" xlink:href="https://images.unsplash.com/photo-1473421128459-ca4900980e03?dpr=1.25&auto=compress,format&fit=crop&w=991&h=661&q=80&cs=tinysrgb&crop=" x="0" y="0" height="300px" width="100%" />
-      </svg>
+      <!--<div id="blur">
+		  <svg width="450" height="75" viewBox="0 0 450 100">
+			<defs>
+			  <filter id="blur">
+				<fegaussianblur in="SourceGraphic" stdDeviation="3"></fegaussianblur>
+			  </filter>
+			</defs>
+			<image filter="url(#blur)" xlink:href="https://images.unsplash.com/photo-1473421128459-ca4900980e03?dpr=1.25&amp;auto=compress,format&amp;fit=crop&amp;w=991&amp;h=661&amp;q=80&amp;cs=tinysrgb&amp;crop=" x="0" y="0" height="300px" width="100%"></image>
+		  </svg>
+    </div>-->
+        <div id="overlay">
+              <div id="stats">
+                  <div id="followers" class="figures">
+                        <span class="big">999</span> <br/>followers
+                  </div>
+
+                  <div id="project" class="figures">
+                        <span class="big">23</span> <br/>projects
+                  </div>
+
+                  <div id="commits" class="figures">
+                        <span class="big">465</span> <br/>commits
+                  </div>
+              </div>
+        </div>
       </div>
-  <img class="avatar" src="http://trump.frost.works/images/avatar.png" alt="Profile">
+  <img class="avatar" src="http://images.8tracks.com/cover/i/002/442/268/galaxy__proximity__by_centerdave77-d7dq7ky-9619.png?rect=420,0,1080,1080&q=98&fm=jpg&fit=max&w=1024&h=1024" alt="Profile">
 
 </div>
 
-  <div id="content">
     <div id="details">
     <div class="space"></div>
+    <div id="contact" class="sections">
     <h1>Daniel Eliasinski</h1>
-    <h2>nope@stonybrook.edu</h2>
-    <h2>Computer Science</h2>
-    <h4>Image Path: https://storage.googleapis.com/imgfave/image_cache/1405665241680752.jpg</h4>
-	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-	<div>
+    <h2 class=email>nope@stonybrook.edu</h2>
+    <h3 class=major>Computer Science</h3>
+    <br>
+  </div>
+
+ <div id="about" class="sections">
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+  <div id="projects" class="sections">
         <h3>Projects Worked On:</h3>
         <table class="table table-striped">
             <tbody><tr>
@@ -39,7 +60,7 @@
             </tr>
         </tbody></table>
     </div>
-    <div>
+    <div id="social" class="sections">
         <h3>URL List</h3>
         <table class="table table-striped">
             <tbody><tr>

@@ -6,13 +6,31 @@
   padding: 0;
 }
 
+body {
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+text-rendering: optimizeLegibility !important;
+-webkit-font-smoothing: antialiased !important;
+}
+
 .space {
   padding: 40px;
 }
 
-h1 {
+h1, h2, h3 {
   font-weight: 200;
+  margin: 10px 0;
+}
+
+h1 {
   font-size: 60px;
+}
+
+p {
+  line-height: 36px;
+}
+
+.big {
+    font-size: 20px;
 }
 
 /* SPLASH */
@@ -25,6 +43,43 @@ h1 {
   background-position: center;
 background-size: cover;
 height: 300px;
+position: relative;
+}
+
+#blur {
+	    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#overlay {
+  width: 100%;
+height: 75px;
+bottom: 0;
+background: rgba(0, 0, 0, 0.35);
+position: absolute;
+}
+
+#stats {
+  margin-left: 275px;
+    height: 100%;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+        flex-basis: 33.333%;
+        font-size:  11px;
+
+}
+
+.figures {
+  vertical-align: middle;
+padding: 15px 20px;
+}
+
+#followers {
+
 }
 
 /* CONTENT */
@@ -44,4 +99,33 @@ margin: 2.5em;
 margin-top: -9em;
 transition: all .3s;
 position: absolute;
+}
+
+.email {
+  color: #6c6c6c;
+}
+
+.major {
+  color: #aaa;
+}
+
+.sections {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+#contact {
+   border-left: 2px solid #03beba;
+}
+
+#about {
+  border-left: 2px solid #f75a70;
+}
+
+#projects {
+  border-left: 2px solid #28b01e;
+}
+
+#social {
+    border-left: 2px solid #f29335;
 }
