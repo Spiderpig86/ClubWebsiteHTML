@@ -39,12 +39,13 @@ p {
 }
 
 #bg {
-  background-image: url("https://images.unsplash.com/photo-1473421128459-ca4900980e03?dpr=1.25&auto=compress,format&fit=crop&w=991&h=661&q=80&cs=tinysrgb&crop=");
-  background-position: center;
-background-size: cover;
-height: 300px;
-position: relative;
-}
+  background-image: url("https://images.unsplash.com/photo-1444424050109-31f057e1e858?dpr=1&auto=format&fit=crop&w=1600&h=900&q=100&cs=tinysrgb&crop=");
+  background-position: 50% 100%;
+  background-size: cover;
+  height: 350px;
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;}
 
 #blur {
 	    position: absolute;
