@@ -74,11 +74,6 @@ margin: 10px 0px;
 color: #fff;
 }
 
-.divider {
-border-bottom: 3px solid #f75a70;
-height: 30px;
-}
-
 .top {
   /*position: absolute;*/
       width: 480px;
@@ -86,12 +81,6 @@ height: 30px;
     bottom: 110px;
     height: 2px;
     margin: 0 50px;
-}
-
-.content {
-  padding: 3em 0 1em 0;
-margin: 0 auto;
-max-width: 55em;
 }
 
 .section {
@@ -120,10 +109,6 @@ a:hover {
       width: 100%;
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-}
-
-.landingSmall {
-
 }
 
 /* LANDING */
@@ -388,15 +373,10 @@ margin: 0 0 2em 0;
   /*df3452*/
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 margin-bottom: 25px;
--webkit-flex: .333;
-   -ms-flex: .333;
-   flex: .333; /*  Needed so the elements actually wrap */
 padding: 1.75em 1.75em 0.1em 1.75em;
 border-radius: 5px;
-    margin: 1.5em;
 text-align: center;
 transition: all .3s;
-max-width: calc(50% - 1.5em);
 }
 
 .polaroid:hover {
@@ -847,7 +827,6 @@ position: relative;
 
 .details {
   display: inline-block;
-      flex-basis: 33.33334%;
     padding: 40px;
           border-left: 2px solid #fff;
         text-align: center;
