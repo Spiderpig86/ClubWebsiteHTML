@@ -92,6 +92,11 @@ color: #fff;
   text-shadow: none;
 }
 
+.divider {
+  height: 2px;
+  background-color: #ddd;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -166,10 +171,11 @@ text-transform: uppercase;
 }
 
 #topMenu li {
-  display: inline-block;
-padding: 15px 25px;
-margin: 0 10px;
-transition: all .3s;
+      display: inline-block;
+    padding: 15px 25px;
+    margin: 0 10px;
+    transition: all .3s;
+    outline: 3px solid transparent;
 }
 
 #topMenu li:hover {
@@ -345,19 +351,6 @@ color: white;
 
 #members {
     background: #f4f7f6;
-}
-
-.members {
-  display: -moz-flex;
-display: -webkit-flex;
-display: -ms-flex;
-display: flex;
--moz-flex-wrap: wrap;
--webkit-flex-wrap: wrap;
--ms-flex-wrap: wrap;
-flex-wrap: wrap;
-margin: 0 0 2em 0;
-    vertical-align: baseline;
 }
 
 #members p {
@@ -548,11 +541,6 @@ margin: 0 0 2em 0;
   padding: 1.75em 1.75em 0.1em 1.75em;
 background-color: #ec0d34;
 border-radius: 5px;
-    margin: 1.5em;
-/*width: calc(50% - 1.5em);*/
--webkit-flex: 1;
-   -ms-flex: 1;
-   flex: 1; /*  Needed so the elements actually wrap */
 }
 
 article .image {
