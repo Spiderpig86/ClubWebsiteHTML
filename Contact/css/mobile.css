@@ -1,0 +1,139 @@
+/* CSS styling for mobile */
+
+@media screen and (max-width: 640px) { /* Define max width for this style to be used. This supports up to most tablets and phones. */
+  /* GLOBAL PROPERTIES */
+
+  h1 {
+      font-size: 38px;
+  }
+
+  .top {
+    width: 180px;
+    border-bottom: 3px solid #ec0d34;
+    bottom: 90px;
+    margin: 0 20px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .btn {
+    letter-spacing: 3px;
+  }
+
+  /* LANDING */
+  #bg {
+        background-position: center center;
+  }
+
+  #brand {
+    transform: none;
+  }
+
+  #landing h1, h2 {
+      padding: 20px;
+      margin: 0;
+  }
+
+  #topMenu li {
+    padding: 10px 15px;
+    transition: all .3s;
+    list-style: none;
+    font-size: 11px;
+    display: block;
+  }
+
+  .staticMenuItem {
+    display: none;
+  }
+
+  #hamburgerbutton {
+    display: inline-block;
+transition: all .3s;
+width: 100%;
+height:60px;
+  }
+
+  #menuList {
+    padding: 0;
+        height: 60px;
+  }
+
+  #mobileMenu {
+    /*display: none;
+ opacity: 0;*/
+ height: 0px;
+ position: fixed;
+ top: 60px;
+ width: 100%;
+ z-index: 999;
+ background: rgba(255, 255, 255, 0.95);
+ transition: all .3s;
+  }
+
+  .mobileMenuItem {
+    text-align: center;
+  }
+
+  /* ABOUT */
+
+  #about p {
+    font-size: 16px;
+  }
+
+  /* PROJECTS */
+  .projects article {
+    padding: 1.75em 1.75em 0.1em 1.75em;
+    background-color: #ec0d34;
+    margin: 1.5em 0;
+    border-radius: 5px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  /* JOIN US */
+  #details {
+      display: block; /* Makes block sizes larger for mobile devices. */
+  }
+
+.details {
+  border-bottom: 1px #fff solid;
+  border-left: none;
+      width: 100%;
+}
+  .details:last-child {
+    border-bottom: none;
+}
+
+/* MOUSE SCROLL EFFECT */
+.scroll-btn .mouse {
+  width: 20px;
+height: 35px;
+}
+}
+
+@media screen and (max-width: 570px) { /* Weird FlexBox issue with the max-width set at 640px */
+  /* MEMBERS */
+  .polaroid {
+    -webkit-flex: 1;
+       -ms-flex: 1;
+       flex: 1; /*  Needed so the elements actually wrap */
+           width: calc(50% - 1.5em);
+           max-width: inherit;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .signin {
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (max-height: 650px) { /** Stop the unneeded resizing at small heights **/
+  #bg {
+       height: 670px;
+  }
+
+}
