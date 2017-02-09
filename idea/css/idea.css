@@ -33,13 +33,17 @@ pre {
 }
 
 #header #menuList a {
-  color: #222 !important; /* Override the original color in the #landing div */
+	color: #222 !important; /* Override the original color in the #landing div */
+	font-family: "Montserrat";
+	text-decoration: none;
 }
 
 #header #menuList #mainMenuItem {
 	display: inline;
     padding: 20px;
+	margin-left: 2px;
     transition: all .3s;
+	font-weight: 600;
     max-height: 60px;
 	color: crimson;
 }
@@ -53,6 +57,7 @@ pre {
 #header #menuList .menuItem {
 	display: inline;
     padding: 20px;
+	font-weight: 400;
     transition: all .3s;
     max-height: 60px;
 }
