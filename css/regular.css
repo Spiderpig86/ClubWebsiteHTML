@@ -9,8 +9,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
-    transition: all .3s;
+    text-rendering: optimizeLegibility;
 }
 
 *:before, *:after { /* For pseudo elements */
@@ -141,7 +140,7 @@ a:hover {
     background-attachment: fixed;
 }
 
-  #landing h1, h2 {
+  #landing h1, #landing h2 {
     margin: 15px 50px;
     text-align: center;
 }
@@ -149,9 +148,8 @@ a:hover {
 .scroll-btn {
     bottom: inherit;
   }
-}
 
-#landing h1, h2 {
+#landing h1, #landing h2 {
     /*position: absolute;*/
     padding: 30px 50px;
     font-weight: 200;
@@ -207,7 +205,7 @@ text-transform: uppercase;
 }
 
 #menuList {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px 0;
     position: fixed;
     width: 100%;
