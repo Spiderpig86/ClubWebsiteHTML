@@ -1,0 +1,292 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+/* Members div */
+.members {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+.profiles{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/* Content of Profile Image*/
+figure.profile {
+  display: inline-block;
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 3%;
+  min-width: 270px;
+  max-width: 270px;
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+}
+
+figure.profile * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+figure.profile .image {
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+  display: block;
+  z-index: 1;
+}
+
+figure.profile .image img {
+  position: relative;
+  display: block;
+  margin: auto;
+  z-index: 1;
+}
+
+figure.profile:before {
+  -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+/* --------------------------------- */
+
+/* Caption under Profile */
+figure.profile figcaption {
+  padding: 20px 10px 0px 0px;
+  position: relative;
+  right: 0;
+  bottom: 5px;
+  width: 100%;
+}
+figure.profile figcaption h2,
+figure.profile figcaption p {
+  margin: 0;
+  text-align: right;
+  padding: 0px 0;
+  width: 100%;
+}
+figure.profile figcaption h2 {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+figure.profile figcaption h2 span {
+  font-weight: 800;
+}
+figure.profile figcaption p {
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+figure.profile figcaption .icons {
+  width: 100%;
+  text-align: right;
+}
+figure.profile figcaption .icons i {
+  font-size: 18px;
+  padding: 5px;
+  top: 50%;
+  color: #000000;
+  opacity: 0;
+}
+
+figure.profile figcaption a {
+  opacity: 0.5;
+}
+
+figure.profile figcaption a:hover {
+  opacity: 1;
+}
+
+/* Individual Hover Colors */
+
+i.fa.fa-twitter:hover {
+  color: #0084b4;
+  opacity: 1;
+}
+
+i.fa.fa-facebook:hover {
+  color: #3b5998;
+  opacity: 1;
+}
+
+i.fa.fa-github:hover {
+  opacity: 1;
+}
+
+i.fa.fa-envelope:hover {
+  opacity: 1;
+}
+
+figure.profile .position {
+  top: 80px;
+  width: 10;
+  text-align: right;
+  padding: 3px 12px;
+  margin-left: 40%;
+  font-size: 0.5em;
+  opacity: 1;
+  font-weight: bold;
+  color: #ffffff;
+  background: #000000;
+  transform: skew(-25deg);
+}
+figure.profile.blue .position {
+  /*background: #20638f;*/
+  background: -webkit-linear-gradient(top, #82addb 0%, #ebb2b1 100%);
+  background: linear-gradient(to bottom, #82addb 0%, #ebb2b1 100%);
+}
+figure.profile.red .position {
+  /*background: #962d22;*/
+  background: -webkit-linear-gradient(top, #57c1eb 0%, #246fa8 100%);
+  background: linear-gradient(to bottom, #57c1eb 0%, #246fa8 100%);
+}
+figure.profile.gold .position {
+  /*background: #e3a712;*/
+  background: -webkit-linear-gradient(top, #90dffe 0%, #38a3d1 100%);
+  background: linear-gradient(to bottom, #90dffe 0%, #38a3d1 100%);
+}
+figure.profile.ocean .position {
+  /*background: #0ead9a;*/
+   background: -webkit-linear-gradient(top, #071B26 0%, #071B26 30%, #8A3B12 80%, #240E03 100%);
+  background: linear-gradient(to bottom, #071B26 0%, #071B26 30%, #8A3B12 80%, #240E03 100%);
+}
+figure.profile.purple .position {
+  background: #b23f73;
+}
+figure.profile.green .position {
+  background: #27ae60;
+}
+figure.profile:hover figcaption,
+figure.profile.hover figcaption  {
+  bottom: 10px;
+}
+figure.profile:hover .icons i,
+figure.profile.hover .icons i {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.profile:hover:before,
+figure.profile.hover:before  {
+  -webkit-animation: shadow 0.6s ease-in-out;
+  animation: shadow 0.6s ease-in-out;
+}
+
+img.avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    /* margin: 20px; */
+}
+
+/* Figure's caption or position*/
+figure .position 
+	span.caption {
+		color: white;
+}
+
+figure.profile figcaption h2 .position span {
+    font-weight: 500;
+}
+
+.member-count{
+	display: block;
+	font-size: 0.8em;
+	opacity: 0.3;
+	margin-top: -20px;
+	margin-bottom: 30px;
+	font-family: Hind Siliguri;
+	text-transform: uppercase;
+	font-weight: 800;
+	text-align: center;
+}
+
+.members-title{
+	display: block;
+	margin-top: 10px;
+	font-family: 'Raleway', Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 800;
+	text-align: center;
+}
+
+/* Page Navigation*/
+
+.navigation{
+	margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+ul {
+	font-family: 'Raleway', Arial, sans-serif;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  float: left;
+  display: block;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  color: #19bdc5;
+  border: 2px solid #19bdc5;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.nav-item.active, .nav-item:hover {
+  color: #fff;
+  background-color: #19bdc5;
+}
+
+.nav-string {
+  float: left;
+  width: auto;
+  height: auto;
+  border: 0 none;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: transparent;
+  color: #19bdc5;
+}
+.nav-string:hover {
+  color: #00676d;
+  background-color: transparent;
+}
+
+
+@-webkit-keyframes shadow {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: -5px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes shadow {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: -5px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
