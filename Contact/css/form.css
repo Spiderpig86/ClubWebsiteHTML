@@ -1,13 +1,77 @@
-form{
+body {
+	/*background: #fff;*/
+}
+
+form {
 	color: #fff;
-	
 }
 
-#message{
-	color: black;
-
+.jumbotron {
+	padding: 3rem;
+    background: #555;
+	margin: 1rem 0;
 }
 
-.text{
-	color: black;
+#topMenu a {
+    font-family: "Montserrat";
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+	font-weight: 400;
+}
+
+footer h2 {
+	font-size: 24px;
+}
+
+.card, .card:hover {
+	box-shadow: 0 9px 38px rgba(0,0,0,0.15), 0 5px 12px rgba(0,0,0,0.12);
+	border-radius: 0;
+	margin: 1rem 0;
+}
+
+h6.light {
+	font-weight: 400;
+}
+
+.card .padded {
+	padding: 1.5rem;
+	margin: 1rem 0;
+}
+
+#contact-side {
+	background: rgb(236, 13, 52); 
+	float: right;
+}
+
+#contact-side p {
+	margin: 1rem 0;
+	opacity: 0.85;
+}
+
+#contact-side .level.col-10 {
+	margin-left: 5%;
+}
+
+#contact-side .level-item img {
+	max-width: 27px;
+}
+
+.fa {
+	font-size: 21px !important;
+	margin: 0.75rem;
+}
+
+footer p {
+	margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+	#contact-side {
+		text-align: center;
+	}
+
+	#contact-side p {
+		margin-left: 0;
+	}
 }
