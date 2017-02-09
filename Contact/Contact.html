@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Contact Us</title>
 
-	 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<head>
+    <title>Contact Us</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="description" content="A responsive one-page template created out of my boredom.">
     <meta charset="UTF-8">
 
     <!-- CSS -->
     <!-- Just adding some possible font choices from Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans|Hind+Siliguri" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="css/cirrus-layout.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400" rel="stylesheet">
+    <link href="../css/cirrus.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/form.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="js/bootstrap.js">
-    <link href="css/regular.css" rel="stylesheet" type="text/css">
-    <link href="css/mobile.css" rel="stylesheet" type="text/css">
-    <!-- Different font families are separated by the '|' character -->
+    <link href="../css/regular.css" rel="stylesheet" type="text/css">
+    <link href="../css/mobile.css" rel="stylesheet" type="text/css">
 
     <!-- JS (if async) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- JQuery CDN -->
     <!-- Put jQuery first so other frameworks will work correctly. Don't use async. -->
 
     <script async src="js/smoothscroll.js"></script>
@@ -29,132 +28,81 @@
     <!-- Use font Awesome for the Hamburger Menu Icon -->
 
 </head>
+
 <body>
+    <div id="topMenu">
+        <!-- Container for the actual menu. -->
 
-	
+        <ul id="topMenuList">
+            <!-- This menu is located at the top of the landing -->
+            <!-- Unordered list of the menu items -->
+            <a class="smoothScroll" href="#about">
+                <!-- href points to a div in the website for the browser to scroll down to -->
+                <li class="headitem">About</li>
+                <!-- The actual menu item itself -->
+            </a>
 
-<!-- 
-         <div id="dropDownMenuContainer">
-       <div id="dropDownMenuCenter" class="center">
-       <ul id="dropDownMenu">
-        <a class="smoothScroll" href="#about">
-                   <li class="mobileMenuItem" onclick="updateMobileMenu(true);">About</li>
-               </a>
-                 <a class="smoothScroll" href="#members" onclick="updateMobileMenu(true);">
-                     <li class="mobileMenuItem">Members</li></a>
-                 <a class="smoothScroll" href="#projects" onclick="updateMobileMenu(true);">
-                     <li class="mobileMenuItem">Projects</li></a>
-                     <a class="smoothScroll" href="#ideas" onclick="updateMobileMenu(true);">
-                         <li class="mobileMenuItem">Ideas</li></a>
-               <a class="smoothScroll" href="#join" onclick="updateMobileMenu(true);">
-                   <li class="mobileMenuItem">Join Us</li>
-               </a>
-       </ul>
-     </div>
+            <a class="smoothScroll" href="#members">
+                <li>Members</li>
+            </a>
 
-   </div> -->
+            <a class="smoothScroll" href="#projects">
+                <li>Projects</li>
+            </a>
 
-     <div id="topMenu">
-            <!-- Container for the actual menu. -->
+            <a class="smoothScroll" href="#ideas">
+                <li>Ideas</li>
+            </a>
 
-            <ul id="topMenuList">
-                <!-- This menu is located at the top of the landing -->
-                <!-- Unordered list of the menu items -->
-                <a class="smoothScroll" href="#about">
-                    <!-- href points to a div in the website for the browser to scroll down to -->
-                    <li class="headitem">About</li>
-                    <!-- The actual menu item itself -->
-                </a>
+            <a class="smoothScroll" href="#join">
+                <li>Join Us</li>
+            </a>
+        </ul>
+    </div>
+    
+    <div class="container">
 
-                <a class="smoothScroll" href="#members">
-                    <li>Members</li>
-                </a>
+        <div class="jumbotron">
 
-                <a class="smoothScroll" href="#projects">
-                    <li>Projects</li>
-                </a>
+            <h1>Contact Us</h1>
 
-                <a class="smoothScroll" href="#ideas">
-                    <li>Ideas</li>
-                </a>
-
-                <a class="smoothScroll" href="#join">
-                    <li>Join Us</li>
-                </a>
-            </ul>
         </div>
 
-	</a>
-</span>
+        <form action="#" method="post">
+
+            <input type="text" name="firstname" placeholder="First Name" required="true" class="text">
+            <input type="text" name="lastname" placeholder="Last Name" required="true" class="text">
+            <input type="text" name="email" placeholder="example@email.com" required="true" class="text">
+
+            <textarea name="message" placeholder="optional" id="message"> 
+		 		
+		 	</textarea>
+
+
+            <input type="checkbox" name="Subscribe">
+            <label for="Subscribe"> Check to Subcribe to Emails</label>
+
+            <br> <br>
+
+            <input type="submit" name="submit" id="subscribe" class="btn-animated btn-white">
+
+
+
+        </form>
 
     </div>
-        
-        </div>
 
-   <div class="container">
-
-   	<div class="jumbotron">
-
-   	<h1>Contact Us</h1>
-
-   	</div>
-
-  		 <form action="#" method="post">
-
- 
-<!--    <label for="FirstName"> First Name </label>
- 	<input type="text" name="FirstName" placeholder="John" required="true">  <br>
- 	<label for="LastName"> Last Name </label>
- 	<input type="text" name="LastName" placeholder="Smith" required="true"> <br>
-
- 	<input type="Submit" name="Submit">
- -->
-		 	 FirstName: <br>
-		 	 <input type="text" name="firstname" placeholder="John" required="true" class="text"> <br> 
-		 	 LastName: <br>
-		 	 <input type="text" name="lastname" placeholder="John" required="true" class="text"> <br>
-		 	 Email: <br>
-		 	<input type="text" name="Email" placeholder="abc1@gmail.com" required="true" class="text"> <br><br>
-		 	 Message: <br>
-		 	<!--  <input type="text" name="Message" placeholder="Type your message here" required="true"> <br> <br> -->
-
-		 	<textarea name="Message" placeholder="optional" id="message" > 
-		 		
-		 	</textarea><br>
-
-
-		 	 <input type="checkbox" name="Subscribe">
-		 	 <label for="Subscribe"> Check to Subcribe to Emails</label>
-
-		 	 <br> <br>
-
-		 	 <input type="Submit" name="Submit" id="subscribe">
-
-
-		 	<br>
-
-
-
-
-   </form>
-
-   </div>
-
-   <footer>
-    <div id="footer">
-      <h2>SBUWADC</h2>
-      <p>Build something you love.</p>
-    <p>
-      <span>
+    <footer>
+        <div id="footer">
+            <h2>SBUWADC</h2>
+            <p>Build something you love.</p>
+            <p>
+                <span>
     Made with <i class="fa fa-heart pulse"></i> in <a href="https://www.google.com/maps/place/Stony+Brook+University/@40.9123761,-73.1255829,17z/data=!3m1!4b1!4m5!3m4!1s0x89e83f33e67438bf:0x734c1ca56abdcc85!8m2!3d40.9123761!4d-73.1233889?hl=en" target="_blank">Stony Brook</a>
 </span></p>
-    </div>
-</footer>
+        </div>
+    </footer>
 
 </body>
-
-
-
-<script async src="js/app.js"></script>
 
 </html>

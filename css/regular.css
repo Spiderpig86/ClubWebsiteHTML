@@ -50,7 +50,7 @@ h3 {
 text-transform: uppercase;
 bottom: 80px;
 font-size: 36px;
-letter-spacing: 4px;
+letter-spacing: 2px;
 color: #fff;
 padding: 20px 0;
 text-shadow: 2px 2px 3px rgba(45, 45, 45, 0.21);
@@ -85,6 +85,17 @@ color: #fff;
 
 .section {
   padding: 50px;
+}
+
+.section p { /* General */
+  color: #fff;
+  line-height: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.section .content > p { /* For section text */
+    line-height: 2rem;
+    margin: 3rem 0rem;
 }
 
 .dark {
@@ -132,7 +143,7 @@ a:hover {
 
   #landing h1, h2 {
     margin: 15px 50px;
-
+    text-align: center;
 }
 
 .scroll-btn {
@@ -284,13 +295,13 @@ text-transform: uppercase;
 }
 
 #brand {
-  vertical-align: middle;
-display: inline-block;
-margin: auto;
-position: relative;
-top: 50%;
-transform: translateY(50%);
-background: rgba(255,255,255,0.3);
+    vertical-align: middle;
+  display: inline-block;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  background: rgba(255,255,255,0.3);
 }
 
 #dropDownMenuContainer {
@@ -344,7 +355,7 @@ color: white;
 #about p {
     color: #fff;
     margin: 3em 0em;
-        font-size: 20.6px;
+        font-size: 1.1rem;
 }
 
 /* MEMBERS */
@@ -353,8 +364,9 @@ color: white;
     background: #f4f7f6;
 }
 
-#members p {
+#members .content > p {
   margin: 50px 0;
+  color: #444;
 }
 
 .members .container p {
@@ -418,11 +430,6 @@ width: calc(100% + 3.5em);
 -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: all .3s;
-}
-
-.container {
-  text-align: center;
-  padding: 10px 20px;
 }
 
 .user-social {
@@ -518,12 +525,6 @@ transition: all .3s;
 
 /* PROJECTS */
 
-#projects p {
-    color: #fff;
-    line-height: 28px;
-    margin: 3em 0em;
-}
-
 .projects {
   display: -moz-flex;
 display: -webkit-flex;
@@ -558,7 +559,7 @@ article .image img {
 }
 
 article h4 {
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
     border-bottom: solid 2px rgb(229, 119, 138);
 }
 
@@ -573,7 +574,6 @@ article h4 {
   display: block;
   margin: 15px auto;
   text-transform: uppercase;
-  letter-spacing: 1px;
   font-weight: 700;
   outline: none;
   position: relative;
@@ -584,7 +584,7 @@ article h4 {
   border: 3px solid #fff;
   color: #fff;
   z-index: 2;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .btn:after {
