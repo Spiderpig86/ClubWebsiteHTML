@@ -3,7 +3,6 @@
 	padding: 0px;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
-	background-color: aliceblue;
 	box-sizing: border-box;
 }
 
@@ -22,8 +21,48 @@ pre {
 	background-attachment: fixed;
 	
 	position: relative;
-	white-space: nowrap;
 	padding-top: 2rem;
+}
+
+/* HEADER MENU */
+
+.hidden {
+    transform: translateY(-100px);
+    transition: all .3s;
+}
+
+#menuList {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: rgba(0,0,0,0.3) 0 0 10px;
+    z-index: 999;
+    transition: .3s;
+    box-sizing: border-box; /* Needed to keep the navbar width within the confines of the page */
+    height: 59px;
+}
+
+#menuList a {
+  color: #222 !important; /* Override the original color in the #landing div */
+}
+
+#topMenuList {
+    padding: 20px;
+    width: 100%;
+    z-index: 999;
+        box-sizing: border-box;
+}
+
+#hamburgerbutton {
+    display: none; /* Hidden by default */
+}
+
+.menu {
+	position: relative;
+}
+.menu:hover {
+  background-color: rgba(164, 164, 164, 0.6);
 }
 
 #header #menuList {
