@@ -3,11 +3,19 @@
 	padding: 0px;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
+<<<<<<< HEAD
+=======
+	background-color: aliceblue;/* Default color */
+>>>>>>> 99c643e01f9ef945e7a21c433d042338971d61d4
 	box-sizing: border-box;
 }
 
 body {
 	background-color: transparent;
+}
+
+body {
+	background-color: aliceblue;
 }
 
 pre {
@@ -70,7 +78,7 @@ pre {
 }
 
 #header #menuList a {
-	color: #222 !important; /* Override the original color in the #landing div */
+	color: #222;
 	font-family: "Montserrat";
 	text-decoration: none;
 	text-transform: uppercase;
@@ -78,16 +86,10 @@ pre {
 
 #header #menuList #mainMenuItem {
 	display: inline;
-    padding: 20px;
-	margin-left: 2px;
+	margin-left: -2px;
     transition: all .3s;
 	font-weight: 600;
     max-height: 60px;
-}
-
-#header #menuList #mainMenuItem:hover {
-    background-color: rgba(164, 164, 164, 0.6);
-    transition: all .3s;
 }
 
 #header #menuList .menuItem {
@@ -96,6 +98,7 @@ pre {
 	font-weight: 400;
     transition: all .3s;
     max-height: 60px;
+	margin-left: -8px;
 }
 
 #header #menuList .menuItem:hover {
@@ -150,7 +153,6 @@ pre {
 	/* Find a good font later! */
 	font-family: "Nunito Sans";
 	font-size: 16px;
-	
 	border-radius: 20px;
 	background-color: black;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -158,4 +160,17 @@ pre {
 	margin-top: 40px;
 	padding: 20px;
 	color: azure;
+}
+
+#disqus {
+	background-color: #0e1e38;
+	border-radius: 20px;
+	margin: 5%;
+	color:azure;
+}
+
+#disqus_thread {
+	padding: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
