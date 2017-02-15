@@ -62,6 +62,10 @@ footer p {
 	margin: 0;
 }
 
+textarea {
+	max-width: 100%;
+}
+
 @media screen and (max-width: 768px) {
 	#contact-side {
 		text-align: center;

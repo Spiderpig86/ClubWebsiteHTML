@@ -32,6 +32,11 @@ p {
 
 .big {
     font-size: 20px;
+    font-weight: bolder;
+}
+
+.col-fluid {
+  max-width: 300px;
 }
 
 #bg {
@@ -166,8 +171,24 @@ td {
 
 .card .row {
   margin-bottom: 2.2833%;
+  padding-top: .5rem;
 }
 
 #projectlogo {
   width: 50px;
+}
+
+@media screen and (max-width: 1090px) {
+  .col-fluid {
+    text-align: center;
+    width: 100%;
+  }
+
+  .level {
+      justify-content: center;
+  }
+
+  #projectlogo {
+      margin: auto;
+  }
 }
