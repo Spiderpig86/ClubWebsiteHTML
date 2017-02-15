@@ -3,10 +3,6 @@
 	padding: 0px;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
-<<<<<<< HEAD
-=======
-	background-color: aliceblue;/* Default color */
->>>>>>> 99c643e01f9ef945e7a21c433d042338971d61d4
 	box-sizing: border-box;
 }
 
@@ -15,7 +11,7 @@ body {
 }
 
 body {
-	background-color: aliceblue;
+	background-color: darkgray;/* Default color */
 }
 
 pre {
@@ -140,10 +136,10 @@ pre {
 .spacer {
 	padding: 60px;
 	background: transparent; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(transparent, aliceblue); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(transparent, aliceblue); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(transparent, aliceblue); /* For Firefox 3.6 to 15 */
-	background-color: linear-gradient(transparent, aliceblue); /* Standard syntax */
+    background: -webkit-linear-gradient(transparent, darkgray); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent, darkgray); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent, darkgray); /* For Firefox 3.6 to 15 */
+	background-color: linear-gradient(transparent, darkgray); /* Standard syntax */
 	position: absolute;
 	bottom: 0;
 	width: 100%;
