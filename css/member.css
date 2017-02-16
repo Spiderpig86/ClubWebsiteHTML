@@ -35,10 +35,6 @@ p {
     font-weight: bolder;
 }
 
-.col-fluid {
-  max-width: 300px;
-}
-
 #bg {
   background-image: url("https://images.unsplash.com/photo-1444424050109-31f057e1e858?dpr=1&auto=format&fit=crop&w=1600&h=900&q=100&cs=tinysrgb&crop=");
   background-position: 50% 100%;
@@ -171,17 +167,20 @@ td {
 
 .card .row {
   margin-bottom: 2.2833%;
-  padding-top: .5rem;
 }
 
 #projectlogo {
   width: 50px;
 }
 
-@media screen and (max-width: 1090px) {
+@media screen and (max-width: 1109px) {
   .col-fluid {
     text-align: center;
     width: 100%;
+  }
+
+  .card .row {
+    padding-top: .5rem;
   }
 
   .level {
@@ -191,4 +190,10 @@ td {
   #projectlogo {
       margin: auto;
   }
+}
+
+@media screen and (min-width: 769px) {
+  .col-fluid {
+  max-width: 300px;
+}
 }

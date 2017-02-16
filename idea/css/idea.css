@@ -3,16 +3,15 @@
 	padding: 0px;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
-	background-color: aliceblue;/* Default color */
 	box-sizing: border-box;
 }
 
-body * {
+body {
 	background-color: transparent;
 }
 
 body {
-	background-color: aliceblue;
+	background-color: darkgray;/* Default color */
 }
 
 pre {
@@ -27,6 +26,47 @@ pre {
 	
 	position: relative;
 	padding-top: 2rem;
+}
+
+/* HEADER MENU */
+
+.hidden {
+    transform: translateY(-100px);
+    transition: all .3s;
+}
+
+#menuList {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: rgba(0,0,0,0.3) 0 0 10px;
+    z-index: 999;
+    transition: .3s;
+    box-sizing: border-box; /* Needed to keep the navbar width within the confines of the page */
+    height: 59px;
+}
+
+#menuList a {
+  color: #222 !important; /* Override the original color in the #landing div */
+}
+
+#topMenuList {
+    padding: 20px;
+    width: 100%;
+    z-index: 999;
+        box-sizing: border-box;
+}
+
+#hamburgerbutton {
+    display: none; /* Hidden by default */
+}
+
+.menu {
+	position: relative;
+}
+.menu:hover {
+  background-color: rgba(164, 164, 164, 0.6);
 }
 
 #header #menuList {
@@ -96,10 +136,10 @@ pre {
 .spacer {
 	padding: 60px;
 	background: transparent; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(transparent, aliceblue); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(transparent, aliceblue); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(transparent, aliceblue); /* For Firefox 3.6 to 15 */
-	background-color: linear-gradient(transparent, aliceblue); /* Standard syntax */
+    background: -webkit-linear-gradient(transparent, darkgray); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent, darkgray); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent, darkgray); /* For Firefox 3.6 to 15 */
+	background-color: linear-gradient(transparent, darkgray); /* Standard syntax */
 	position: absolute;
 	bottom: 0;
 	width: 100%;

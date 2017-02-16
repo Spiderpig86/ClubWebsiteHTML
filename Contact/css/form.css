@@ -74,4 +74,12 @@ textarea {
 	#contact-side p {
 		margin-left: 0;
 	}
+
+	.card .padded {
+		margin: auto;
+	}
+
+	#contact-side p {
+		margin: 0;
+	}
 }
