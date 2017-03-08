@@ -10,7 +10,7 @@ if ($("#bg").height() > 650) {
 
   $(window).on('resize', function() { // Make sure the window height updates along with the browser
       if ($("#bg").height() > 650) {
-        console.log($("#bg").height());
+        //console.log($("#bg").height());
         $("#landing").css({
           'height' : $("#bg").height()
       })
