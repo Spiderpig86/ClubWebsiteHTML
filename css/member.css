@@ -195,6 +195,10 @@ td {
     margin: 20px 10px;
 }
 
+#menuList {
+  height: 62px !important;
+}
+
 @media screen and (max-width: 1109px) {
   .col-fluid {
     text-align: center;
@@ -218,4 +222,13 @@ td {
   .col-fluid {
   max-width: 300px;
 }
+}
+
+@media screen and (max-width: 768px) {
+  .avatar {
+        margin: -15rem auto;
+    margin-bottom: 5rem;
+    position: relative;
+    width: 100px;
+  }
 }
