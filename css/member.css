@@ -68,6 +68,7 @@ position: absolute;
     display: flex;
         flex-basis: 33.333%;
         font-size:  11px;
+        transition: all .3s;
 
 }
 
@@ -230,5 +231,10 @@ td {
     margin-bottom: 5rem;
     position: relative;
     width: 100px;
+  }
+
+  #stats {
+    margin-left: 1rem;
+    transition: all .3s;
   }
 }
