@@ -8,9 +8,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans|Hind+Siliguri" rel="stylesheet">
 	<link href="../css/cirrus.min.css" type="text/css" rel="stylesheet">
 	<link href="css/idea.css" type="text/css" rel="stylesheet">
+	<link href="../css/navbar.css" type="text/css" rel="stylesheet">
+    <link href="../css/mobile.css" type="text/css" rel="stylesheet">
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400" rel="stylesheet">
+
+	      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
 	<!-- This styling overwrites from idea.css and is done inline so that thymeleaf can come in and change it. Allows user to set color of page. -->
 	<style>
@@ -29,23 +33,60 @@
 <body>
 	<div id="header">
 
-		<ul id="menuList">
-			<a href="#about">
-				<!-- href points to a div in the website for the browser to scroll down to -->
-				<li id="mainMenuItem" class="menuItem">SBU WEB & APP CLUB</li>
-				<!-- The actual menu item itself -->
-			</a>
-			<a href="#members">
-				<li class="menuItem">Members</li>
-			</a>
-			<a href="#projects">
-				<li class="menuItem">Projects</li>
-			</a>
-			<a href="#ideas">
-				<li class="menuItem">Ideas</li>
-			</a>
-		</ul>
+		<div id="staticMenu">
+            <!-- Hidden class hides the menu initially -->
+            <ul id="menuList" class="">
+                <!-- Unordered list of the menu items -->
+                <div id="hamburgerButton" class="menu">
+                    <!-- Hamburger button. Only shown in the mobile view -->
+                    <!--<i class="menuicon fa fa-bars" aria-hidden="true"></i>-->
+                    <!-- Icon tag. Font Awesome needs to be imported to use this -->
+                    <span></span>
+                </div>
+
+                <a class="smoothScroll" href="#about">
+                    <!-- href points to a div in the website for the browser to scroll down to -->
+                    <li class="staticMenuItem">About</li>
+                    <!-- The actual menu item itself -->
+                </a>
+
+                <a class="smoothScroll" href="#members">
+                    <li class="staticMenuItem">Members</li>
+                </a>
+
+                <a class="smoothScroll" href="#projects">
+                    <li class="staticMenuItem">Projects</li>
+                </a>
+
+                <a class="smoothScroll" href="#ideas">
+                    <li class="staticMenuItem">Ideas</li>
+                </a>
+
+                <a class="smoothScroll" href="#join">
+                    <li class="staticMenuItem">Join</li>
+                </a>
+        </ul></div>
 	</div>
+
+	 <!-- DROP DOWN MOBILE MENU -->
+        <div id="dropDownMenuContainer">
+       <div id="dropDownMenuCenter" class="center">
+       <ul id="dropDownMenu">
+        <a class="smoothScroll" href="#about">
+                   <li class="mobileMenuItem" onclick="updateMobileMenu(true);">About</li>
+               </a>
+                 <a class="smoothScroll" href="#members" onclick="updateMobileMenu(true);">
+                     <li class="mobileMenuItem">Members</li></a>
+                 <a class="smoothScroll" href="#projects" onclick="updateMobileMenu(true);">
+                     <li class="mobileMenuItem">Projects</li></a>
+                     <a class="smoothScroll" href="#ideas" onclick="updateMobileMenu(true);">
+                         <li class="mobileMenuItem">Ideas</li></a>
+               <a class="smoothScroll" href="#join" onclick="updateMobileMenu(true);">
+                   <li class="mobileMenuItem">Join Us</li>
+               </a>
+       </ul>
+     </div>
+   </div>
 	<div id="cover">
 		<space class="x-large"></space>
 		<div class="content">
@@ -102,5 +143,7 @@
 		</script>
 		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 	</div>
+
+	<script src="../js/app.js"></script>
 </body>
 </html>

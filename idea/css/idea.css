@@ -61,45 +61,8 @@ pre {
 #hamburgerbutton {
     display: none; /* Hidden by default */
 }
-
-.menu {
-	position: relative;
-}
-.menu:hover {
-  background-color: rgba(164, 164, 164, 0.6);
-}
-
 #header #menuList {
 	padding: 17px 0;
-}
-
-#header #menuList a {
-	color: #222;
-	font-family: "Montserrat";
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-#header #menuList #mainMenuItem {
-	display: inline;
-	margin-left: -2px;
-    transition: all .3s;
-	font-weight: 600;
-    max-height: 60px;
-}
-
-#header #menuList .menuItem {
-	display: inline;
-    padding: 20px;
-	font-weight: 400;
-    transition: all .3s;
-    max-height: 60px;
-	margin-left: -8px;
-}
-
-#header #menuList .menuItem:hover {
-    background-color: rgba(164, 164, 164, 0.6);
-    transition: all .3s;
 }
 
 #cover #icon {
@@ -169,4 +132,30 @@ pre {
 	padding: 30px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+/* Navbar */
+
+#dropDownMenu {
+  width: 100%;
+}
+
+#dropDownMenu a {
+      font-family: "Montserrat";
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0;
+}
+
+.mobileMenuItem {
+    display: block;
+    color: #2b2b2b;
+    padding: 15px 25px;
+    padding-top: 15px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    margin: 0 !important;
+    font-weight: 400;
 }
