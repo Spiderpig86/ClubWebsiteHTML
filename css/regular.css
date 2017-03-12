@@ -315,18 +315,6 @@ text-transform: uppercase;
       overflow-x: hidden; /* Needed to hide the mobile menu items from appearing */
 }
 
-
-.mobileMenuItem {
-  display: block;
-color: #2b2b2b;
-padding: 15px 25px;
-}
-
-.mobileMenuItem:hover {
-    background-color: #ec0d34;
-    color: #fff;
-}
-
 .signin {
   right: 0;
 float: right;

@@ -200,6 +200,36 @@ td {
   height: 62px !important;
 }
 
+.level {
+  display: flex;
+}
+
+/* Navbar */
+
+#dropDownMenu {
+  width: 100%;
+}
+
+#dropDownMenu a {
+      font-family: "Montserrat";
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0;
+}
+
+.mobileMenuItem {
+    display: block;
+    color: #2b2b2b;
+    padding: 15px 25px;
+    padding-top: 15px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    margin: 0 !important;
+    font-weight: 400;
+}
+
 @media screen and (max-width: 1109px) {
   .col-fluid {
     text-align: center;
@@ -236,5 +266,9 @@ td {
   #stats {
     margin-left: 1rem;
     transition: all .3s;
+  }
+
+  .figures {
+    padding: 15px 10px;
   }
 }
