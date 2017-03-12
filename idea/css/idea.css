@@ -35,18 +35,6 @@ pre {
     transition: all .3s;
 }
 
-#menuList {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    box-shadow: rgba(0,0,0,0.3) 0 0 10px;
-    z-index: 999;
-    transition: .3s;
-    box-sizing: border-box; /* Needed to keep the navbar width within the confines of the page */
-    height: 59px;
-}
-
 #menuList a {
   color: #222 !important; /* Override the original color in the #landing div */
 }
@@ -60,9 +48,6 @@ pre {
 
 #hamburgerbutton {
     display: none; /* Hidden by default */
-}
-#header #menuList {
-	padding: 17px 0;
 }
 
 #cover #icon {
@@ -158,4 +143,10 @@ pre {
     padding-left: 25px;
     margin: 0 !important;
     font-weight: 400;
+}
+
+@media screen and (min-width: 640px) {
+	#dropDownMenuContainer {
+		height: 0% !important;
+	}
 }

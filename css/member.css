@@ -196,10 +196,6 @@ td {
     margin: 20px 10px;
 }
 
-#menuList {
-  height: 62px !important;
-}
-
 .level {
   display: flex;
 }
